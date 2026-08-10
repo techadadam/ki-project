@@ -1,0 +1,58 @@
+.mg-t-sc-sm {
+  margin-top: clamp(1.8rem, 4vw, 6.6rem);
+}
+
+.mg-t-sc-md {
+  margin-top: clamp(3.2rem, 7.5vw, 12rem);
+}
+
+/* ----- Sekcja O nas ----- */
+.section-o-nas {
+  background-color: var(--color-background);
+  color: var(--color-base-dark);
+}
+
+.text--first-section {
+  text-align: center;
+  overflow: hidden;
+}
+
+.photo-o-nas {
+  overflow: hidden;
+}
+
+.bd-rad-NE {
+  border-radius: 0 var(--radius--button) 0 0;
+}
+
+.bd-rad-SW {
+  border-radius: 0 0 0 var(--radius--button);
+}
+
+.photo-o-nas img {
+  display: block;
+  width: 100%;
+  max-height: 700px;
+  transition: all 0.4s;
+}
+
+.photo-o-nas img:hover {
+  transform: scale(1.1);
+}
+
+.text--first-section p:last-of-type {
+  margin-top: 5rem;
+}
+
+/* SECTION CTA */
+
+.section-cta {
+  margin: 6.6rem 0;
+}
+
+/* Ponizej 944px (Tablety) */
+@media (max-width: 59em) {
+  .section-o-nas {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,15 @@
+.container-d90p {
+  width: 90%;
+  max-width: 140rem;
+  margin: 0 auto;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 75em) {
+  .container-d90p {
+    width: 90%;
+    max-width: 120rem;
+    margin: 0 auto;
+  }
+}

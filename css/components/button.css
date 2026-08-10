@@ -1,0 +1,129 @@
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+
+  text-decoration: none;
+  font-size: clamp(1.2rem, 2.8vw, 2.8rem);
+  font-weight: 700;
+  padding: 1.2rem 4.8rem;
+  border-radius: var(--radius--button);
+
+  /* dla btn: */
+  border: none;
+  /*border-color: var(--color-accent2);*/
+  border-width: 1px;
+  cursor: pointer;
+  font-family: inherit;
+
+  transition: all 0.3s;
+}
+
+.btn--full:link,
+.btn--full:visited {
+  color: var(--color-base-light);
+  background-color: rgb(from var(--color-base-dark) r g b / 0.3);
+}
+
+.btn--full:hover,
+.btn--full:active {
+  background-color: var(--color-base-light);
+  color: var(--color-accent1);
+}
+
+.margin-right-sm {
+  margin-right: 1.6rem !important;
+}
+
+.btn--outline:link,
+.btn--outline:visited {
+  background-color: var(--color-base-dark);
+  color: var(--color-accent3);
+  border-style: solid;
+}
+
+.btn--outline:hover,
+.btn--outline:active {
+  background-color: var(--color-accent3);
+  color: var(--color-accent1);
+  border-style: solid;
+}
+
+.btn--form {
+  background-color: var(--color-accent3);
+  color: var(--color-base-dark);
+  align-self: end;
+  padding: 1.2rem;
+}
+
+.btn--form:hover {
+  background-color: var(--color-accent2);
+}
+
+/* Przycisk zamknięcia mobile nav */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: var(--color-base-light);
+  cursor: pointer;
+  user-select: none;
+}
+
+.btn {
+  padding: 14px 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    transform 0.15s ease,
+    opacity 0.15s ease;
+}
+
+.btn--primary:link,
+.btn--primary:visited {
+  background-color: var(--color-accent2);
+  color: var(--color-base-dark);
+}
+
+.btn--primary:hover,
+.btn--primary:active {
+  background-color: var(--color-accent3);
+  color: var(--color-base-light);
+}
+
+.btn--secondary:link,
+.btn--secondary:visited {
+  background-color: color-mix(in srgb, var(--color-accent3) 85%, transparent);
+  color: var(--color-base-light);
+}
+
+.btn--secondary:hover,
+.btn--secondary:active {
+  background-color: var(--color-base-light);
+  color: var(--color-base-dark);
+}
+
+.btn--ghost {
+  background-color: color-mix(in srgb, var(--color-accent2) 35%, transparent);
+  color: var(--color-base-light);
+  backdrop-filter: blur(8px);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+/* Ponizej 944px (Tablety) */
+@media (max-width: 59em) {
+  .btn {
+    padding: 1.2rem 3.2rem;
+  }
+}
+
+/* Ponizej 544px (telefon) */
+@media (max-width: 34em) {
+  .btn {
+    padding: 1.2rem 2.4rem;
+  }
+}

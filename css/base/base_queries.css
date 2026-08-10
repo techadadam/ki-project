@@ -1,0 +1,95 @@
+/*base*/
+
+/* RESPONSIVE */
+
+/* Ponizej 1200px (Szerokok. tablety) */
+@media (max-width: 75em) {
+  html {
+    /* 9px / 16px  */
+    font-size: 56.25%;
+  }
+}
+
+/* Ponizej 944px (Tablety) */
+@media (max-width: 59em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+/* SAFARI FLEXBOX GAP FIX */
+
+.no-flexbox-gap .main-nav-list li:not(:last-child) {
+  margin-right: 4.8rem;
+}
+
+.no-flexbox-gap .list-item:not(:last-child) {
+  margin-bottom: 1.6rem;
+}
+
+.no-flexbox-gap .list-icon:not(:last-child) {
+  margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .delivered-faces {
+  margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .asortyment-attribute:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.no-flexbox-gap .asortyment-icon {
+  margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .footer-row div:not(:last-child) {
+  margin-right: 6.4rem;
+}
+
+.no-flexbox-gap .social-media-links li:not(:last-child) {
+  margin-right: 2.4rem;
+}
+
+.no-flexbox-gap .footer-nav li:not(:last-child) {
+  margin-bottom: 2.4rem;
+}
+
+@media (max-width: 75em) {
+  .no-flexbox-gap .main-nav-list li:not(:last-child) {
+    margin-right: 3.2rem;
+  }
+}
+
+@media (max-width: 59em) {
+  .no-flexbox-gap .main-nav-list li:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 4.8rem;
+  }
+}
+
+/*typography*/
+
+/* RESPONSIVE */
+
+/* Ponizej 1200px (Szerokok. tablety) */
+@media (max-width: 75em) {
+  .heading-secondary {
+    font-size: 3.6rem;
+  }
+
+  .text-o-nas {
+    font-size: 1.8rem;
+  }
+
+  .heading-tertiary {
+    font-size: 2.4rem;
+  }
+}
+
+/* Poniżej 704px (Male tablety) */
+@media (max-width: 44em) {
+  .heading-secondary {
+    margin-bottom: 4.8rem;
+  }
+}

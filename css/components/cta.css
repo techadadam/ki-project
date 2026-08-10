@@ -1,0 +1,134 @@
+/*  sekcja kontakt (CTA)  */
+
+.cta-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 4.8rem;
+}
+
+.section-cta {
+  padding: 4.8rem 0 12.8rem;
+}
+
+.cta {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+  border-radius: 11px;
+
+  background-image: linear-gradient(
+    to right bottom,
+    var(--color-accent1),
+    rgba(50, 50, 50)
+  );
+  overflow: hidden;
+}
+
+.cta-text-box {
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+  color: var(--color-base-light);
+}
+
+.cta .heading-secondary {
+  color: inherit;
+  margin-bottom: 3.2rem;
+}
+
+.cta-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 4.8rem;
+}
+
+.cta-img-box {
+  background-image:
+    linear-gradient(
+      to right bottom,
+      rgba(113, 129, 146, 0.35),
+      rgba(22, 49, 101, 0.35)
+    ),
+    url("../../img/IMG1_HeroBackgroundPi.webp");
+  background-size: cover;
+  background-position: center;
+}
+
+.cta-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3.2rem;
+  row-gap: 2.4rem;
+}
+
+.cta-form label {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+
+.cta-form input,
+.cta-form select {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  font-family: inherit;
+  color: inherit;
+  border: none;
+  background-color: var(--color-base-dark);
+  border-radius: 9px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.cta-form input::placeholder {
+  color: color-mix(in srgb, var(--color-base-light) 60%, black);
+}
+
+.cta-form textarea,
+.cta-form select {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  font-family: inherit;
+  color: inherit;
+  border: none;
+  background-color: var(--color-base-dark);
+  border-radius: 9px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.cta-form textarea::placeholder {
+  color: color-mix(in srgb, var(--color-base-light) 60%, black);
+}
+
+.cta *:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
+}
+
+/* Ponizej 944px (Tablety) */
+@media (max-width: 59em) {
+  .btn--form {
+    margin-top: 1.2rem;
+  }
+}
+
+@media (max-width: 34em) {
+  .btn,
+  .btn:link,
+  .btn:visited {
+    padding: 1.2rem 4.2rem;
+  }
+}
+
+/*cta*/
+/* Ponizej 544px (telefon) */
+@media (max-width: 34em) {
+  .cta-text-box {
+    padding: 3.2rem;
+  }
+
+  .cta-img-box {
+    height: 32rem;
+    grid-row: 1;
+  }
+}

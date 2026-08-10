@@ -1,0 +1,154 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--font-main);
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color: var(--color-base-dark);
+}
+
+/*   Hero   */
+.hero-title,
+.hero-subtitle,
+.heading-secondary,
+.heading-tertiary {
+  color: rgb(from var(--color-base-light) r g b / 0.85);
+  letter-spacing: -0.5px;
+}
+
+.hero-title {
+  font-weight: 700;
+  font-size: clamp(1.8rem, 5vw, 5.4rem);
+  line-height: 1.05;
+  margin-bottom: 3.2rem;
+}
+
+.hero-subtitle {
+  color: rgb(from var(--color-base-light) r g b / 0.85);
+  font-weight: 500;
+  font-size: clamp(1.4rem, 4vw, 4.2rem);
+  line-height: 1.05;
+  margin-bottom: 4.2rem;
+}
+
+.hero-text h1 {
+  font-size: clamp(2.8rem, 4vw, 5.4rem);
+}
+
+.hero-text h3 {
+  margin-top: 1rem;
+  font-size: clamp(2.4rem, 4vw, 4.8rem);
+}
+
+/*   Subhero   */
+.subhero-title,
+.subhero-subtitle,
+.heading-secondary,
+.heading-tertiary {
+  font-weight: 700;
+  color: rgb(from var(--color-base-light) r g b / 0.85);
+  letter-spacing: -0.5px;
+}
+
+.subhero-title {
+  font-size: 5.4rem;
+  line-height: 1.05;
+  margin-bottom: 4.8rem;
+}
+
+.subhero-subtitle {
+  color: rgb(from var(--color-base-light) r g b / 0.85);
+  font-size: 3.2rem;
+  line-height: 1.05;
+  margin-bottom: 9.6rem;
+}
+
+.subhero-text h1 {
+  font-size: clamp(4.2rem, 5.4vw, 5.4rem);
+}
+
+.subhero-text h3 {
+  margin-top: 1rem;
+  font-size: clamp(2.4rem, 4vw, 4.8rem);
+}
+
+.heading-secondary {
+  color: var(--color-accent1);
+  font-size: clamp(2.4rem, 2.5vw, 4.2rem);
+  line-height: 1.2;
+  margin-bottom: 7.2rem;
+}
+
+.no-margin-bottom {
+  margin-bottom: 0;
+}
+
+.heading-tertiary {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
+}
+
+.subheading {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--color-accent2);
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+  letter-spacing: 0.75px;
+}
+
+strong {
+  font-weight: 700;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.text-dark {
+  color: var(--color-base-dark);
+}
+
+.text-light {
+  color: var(--color-base-light);
+}
+
+.text-accent1 {
+  color: var(--color-accent1);
+}
+
+.text--first-section {
+  font-size: clamp(1.4rem, 2vw, 2.4rem);
+  line-height: 1.6;
+  margin-bottom: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
+
+.txt--sm-pg {
+  padding-bottom: clamp(0.1rem, 0.5vw, 0.5rem);
+}
+
+.txt--md-pg {
+  padding: clamp(0.6rem, 1vw, 1.2rem);
+}
+
+.title--section {
+  color: var(--color-accent1);
+  font-size: clamp(1.4rem, 2vw, 2.4rem);
+  text-align: center;
+  margin-bottom: 4.6rem;
+}
+
+.paragraph--relizations {
+  text-align: center;
+  font-size: clamp(1.4rem, 2vw, 2.4rem);
+  line-height: 1.6;
+}

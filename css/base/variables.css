@@ -1,0 +1,55 @@
+/* MOTYW DOMYSLNY */
+:root {
+  --color-base-dark: #0d0d0d; /*CARBON BLACK*/
+  --color-base-light: #ffffff; /*PURE WHITE #EFEFEF*/
+  --color-accent1: #055724; /*BLUE*/
+  --color-accent2: #f1e0c5; /*RED*/
+  --color-accent3: #f85e00; /*YELLOW*/
+  --color-base-grey: #f3f0e8; /*GREY*/
+
+  --color-background: #f5f0e8; /* sticky nav color*/
+  --color-shadow1: rgba(0, 0, 0, 0.03);
+
+  --font-main: "Montserrat", sans-serif;
+
+  --radius--button: 50px;
+  --transition: 0.3s ease;
+
+  /* Hero: */
+  --max: 1200px;
+  --pad: clamp(16px, 3vw, 56px);
+}
+
+/*
+główny: #055724
+złoty akcent: #E6B84A
+jasny kolor uzupełniający: #F5F0E8
+
+główny: #055724
+lodowy błękit: #A7CEFF
+koralowy akcent: #FF8A6B
+
+#055724;
+  --accent: #B9A7E8;
+  --background: #F2F3F1;
+
+    --primary: #055724;
+  --accent: #D96C45;
+  --background: #EDE2D0;
+*/
+
+/* dodawanie przezroczystosci np w tle przycisku:
+background-color: rgb(from var(--color-accent2) r g b / 0.7);
+background-color: color-mix(in srgb, var(--color-accent2) 35%, transparent);
+*/
+
+/* rozjasnianie koloru:
+background-color: color-mix(in srgb, var(--color-accent1) 80%, white 20%);
+
+*/
+
+/* MOTYW ALTERNATYWNY po dodaniu stylu style="dark" w body */
+.dark {
+  --color-background: #000;
+  --color-text: #fff;
+}

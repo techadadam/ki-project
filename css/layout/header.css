@@ -1,0 +1,341 @@
+.header {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  height: 14rem;
+  width: 100%;
+  padding: 4.8rem 6.4rem 1.2rem 6.4rem;
+}
+
+.header__content {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  column-gap: 4.2rem;
+
+  width: 100%;
+  height: 100%;
+}
+
+.header__content__box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: max-content;
+  max-width: 100%;
+  height: 100%;
+  flex: 0 0 auto;
+
+  padding: 0 1.2rem;
+  margin: 0;
+
+  border-radius: var(--radius--button);
+  background-color: color-mix(in srgb, var(--color-base-dark) 35%, transparent);
+
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.35);
+}
+
+.sticky .header__content__box {
+  background-color: color-mix(in srgb, var(--color-accent1) 75%, transparent);
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.header__content__box:first-child {
+  justify-self: start;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.header__content__box:nth-child(2) {
+  justify-self: center;
+}
+
+.header__content__box:last-of-type {
+  justify-self: end;
+  width: max-content;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.header__menulist {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  padding: 0 1.2rem;
+  border-radius: var(--radius--button);
+  gap: 4.2rem;
+}
+
+.header__menulist__link {
+  display: inline-block;
+  padding: 1.8rem 3.2rem;
+  border-radius: var(--radius--button);
+}
+
+.header__menulist__link:hover {
+  display: inline-block;
+  background-color: color-mix(in srgb, var(--color-base-dark) 95%, transparent);
+  border-radius: var(--radius--button);
+}
+
+.header__menulist__element {
+  display: flex;
+  align-items: center;
+  font-size: 2.4rem;
+  border-radius: var(--radius--button);
+  color: var(--color-base-light);
+}
+
+.header_content_company {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: var(--radius--button);
+}
+
+.header__content__box a {
+  color: var(--color-base-light);
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 8;
+}
+
+.header__company-name {
+  font-size: clamp(3.2rem, 5.5vw, 4.2rem);
+  font-weight: 700;
+  padding: 0;
+  align-self: center;
+  color: var(--color-base-light);
+}
+
+.sticky .header__company-name {
+  color: var(--color-base-dark);
+}
+
+.sticky .header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 12rem;
+  padding: 2rem 6.4rem;
+  z-index: 9;
+}
+
+.sticky .section__hero {
+  margin-top: 9.6rem;
+}
+
+/* ----- Mobilna naw ----- */
+
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: var(--color-accent2);
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
+
+/*MOBILE MENU*/
+.header__mobile-button {
+  position: relative;
+  z-index: 101;
+
+  display: none;
+
+  width: 4.8rem;
+  height: 4.8rem;
+  padding: 0;
+
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.header__mobile-button span {
+  position: absolute;
+  left: 50%;
+
+  width: 2.8rem;
+  height: 0.2rem;
+
+  background-color: var(--color-base-light);
+  border-radius: 1rem;
+
+  transform: translateX(-50%);
+  transition:
+    top 0.3s ease,
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.header__mobile-button span:nth-child(1) {
+  top: 1.5rem;
+}
+
+.header__mobile-button span:nth-child(2) {
+  top: 2.3rem;
+}
+
+.header__mobile-button span:nth-child(3) {
+  top: 3.1rem;
+}
+
+.header__mobile-button.is-open span:nth-child(1) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.header__mobile-button.is-open span:nth-child(2) {
+  opacity: 0;
+}
+
+.header__mobile-button.is-open span:nth-child(3) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10rem 2rem 4rem;
+
+  background-color: var(--color-base-dark);
+
+  transform: translateX(100%);
+  visibility: hidden;
+  pointer-events: none;
+
+  transition:
+    transform 0.4s ease,
+    visibility 0.4s ease;
+}
+
+.mobile-menu.is-open {
+  transform: translateX(0);
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.mobile-menu__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4rem;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.mobile-menu__link {
+  display: block;
+  padding: 1rem 2rem;
+
+  color: var(--color-base-light);
+  font-size: clamp(2.8rem, 8vw, 4.8rem);
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.mobile-menu__link:hover {
+  color: var(--color-accent1);
+  transform: translateX(0.5rem);
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+@media (max-width: 75em) {
+  .header__desktop-nav,
+  .header__desktop-contact {
+    display: none;
+  }
+
+  .header__mobile-button {
+    display: block;
+  }
+
+  .header__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .sticky .header__company-name {
+    color: var(--color-base-light);
+  }
+}
+
+/* Ponizej 944px (Tablety) */
+@media (max-width: 59em) {
+  .header {
+    padding: 3.2rem 3.2rem 1.2rem 3.2rem;
+  }
+
+  .header_content_company {
+    padding: 0;
+  }
+
+  .header__content__box {
+    padding: 0;
+  }
+
+  .sticky .header {
+    padding: 1.2rem 2.4rem;
+  }
+}
+
+/* Ponizej 1200px (szerok. tablety) */
+@media (max-width: 75em) {
+  .sticky .header {
+    background-color: color-mix(in srgb, var(--color-accent1) 70%, transparent);
+  }
+  .sticky .header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-color: color-mix(in srgb, var(--color-accent1) 70%, transparent);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+}
+
+/* Ponizej 544px (telefon) */
+@media (max-width: 34em) {
+  .header {
+    padding: 3.2rem 2.4rem 1.2rem 2.4rem;
+  }
+}

@@ -1,0 +1,25 @@
+.link--header {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo--standard {
+  height: clamp(2.4rem, 4.5vw, 3.6rem);
+  padding: 0 1.2rem;
+}
+
+.logo--small {
+  height: clamp(1.8rem, 2.25vw, 2.4rem);
+  padding: 0 1.2rem;
+}
+
+.company-name--small {
+  font-size: clamp(1.8rem, 2.25vw, 2.4rem);
+  font-weight: 600;
+}
+
+.logo--invert-colors {
+  filter: invert(100%);
+}

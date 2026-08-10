@@ -1,0 +1,12 @@
+# /stats/.htaccess
+# Blokada pobierania stats-data.json kompatybilna z Apache 2.2 i 2.4
+
+<Files "stats-data.json">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
+</Files>

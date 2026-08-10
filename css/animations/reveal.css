@@ -1,0 +1,56 @@
+/* Reveal базowy */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+  will-change: opacity, transform;
+}
+
+.reveal--sl1 {
+  transform: translateY(36px);
+  transition:
+    opacity 1.2s ease,
+    transform 1.2s ease;
+}
+
+.reveal--sl2 {
+  transform: translateY(42px);
+  transition:
+    opacity 2.4s ease,
+    transform 2.4s ease;
+}
+
+.reveal--sl3 {
+  transition:
+    opacity 3.2s ease,
+    transform 3.2s ease;
+}
+
+.reveal.reveal--active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* warianty kierunku (opcjonalnie) */
+.reveal--left {
+  transform: translateX(-24px);
+}
+.reveal--right {
+  transform: translateX(24px);
+}
+.reveal--zoom {
+  transform: scale(0.98);
+}
+
+.reveal--left.reveal--active,
+.reveal--right.reveal--active,
+.reveal--zoom.reveal--active {
+  transform: none;
+}
+
+.reveal--subtitle {
+  opacity: 1;
+  transform: translateY(0);
+}
