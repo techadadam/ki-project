@@ -10,6 +10,11 @@
   padding: 0 1.2rem;
 }
 
+.logo--large {
+  height: clamp(3.6rem, 9vw, 6.6rem);
+  padding: 0 1.2rem;
+}
+
 .logo--small {
   height: clamp(1.8rem, 2.25vw, 2.4rem);
   padding: 0 1.2rem;
@@ -21,5 +26,9 @@
 }
 
 .logo--invert-colors {
+  filter: invert(100%);
+}
+
+.sticky .logo--sticky-invert {
   filter: invert(100%);
 }

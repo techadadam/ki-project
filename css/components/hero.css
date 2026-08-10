@@ -1,9 +1,10 @@
 .section__hero {
   background-color: var(--color-background);
   height: 100svh;
+  padding: 4.2rem;
   overflow: hidden;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   z-index: -1;
 }
@@ -36,12 +37,17 @@
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(
+  background: rgba(
+    0,
+    0,
+    0,
+    0.6
+  ); /*linear-gradient(
     90deg,
     rgba(0, 0, 0, 0.35) 0%,
     rgba(0, 0, 0, 0.15) 50%,
     rgba(0, 0, 0, 0.25) 100%
-  );
+  );*/
 }
 
 .hero__content {
@@ -51,10 +57,7 @@
   display: flex;
   flex-direction: column;
   width: 80%;
-  justify-content: start;
   padding-top: 28rem;
-  align-items: center;
-  text-align: center;
   gap: 2.4rem;
 }
 
@@ -66,32 +69,31 @@
 
 .hero__box {
   position: relative;
-  margin-bottom: 16rem;
+  margin-bottom: 5.4rem;
+  padding: 3.2rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 4.2rem;
+  gap: 2.4rem;
   width: 100%;
-  text-align: center;
-  border-radius: 20px;
+  /*background-color: var(--color-base-dark);*/
 }
 
 .hero__content h1 {
+  text-transform: uppercase;
   font-size: clamp(3.2rem, 4.5vw, 6.6rem);
   line-height: 1.02;
 
-  color: var(--color-base-light);
+  color: var(--color-accent1);
   text-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
-  text-align: center;
 }
 
 .hero__content h2 {
+  text-transform: uppercase;
   font-size: clamp(2.4rem, 4.5vw, 6.6rem);
   font-weight: 400;
   line-height: 1.02;
   color: color-mix(in srgb, var(--color-base-light) 80%, transparent);
   /*text-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);*/
-  text-align: center;
 }
 
 .hero__buttons {
@@ -109,7 +111,6 @@
   line-height: 6.4rem;
   color: var(--color-base-dark);
   z-index: 3;
-  border-radius: var(--radius--button);
   width: 70%;
   box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.35);
 }
@@ -132,8 +133,6 @@
   inset: 0;
 
   display: flex;
-  align-items: center;
-  justify-content: center;
 
   margin: 0;
   text-align: center;
@@ -144,6 +143,27 @@
     opacity 0.6s ease,
     transform 0.6s ease;
   will-change: opacity, transform;
+}
+
+.facts-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  font-size: 2.4rem;
+}
+
+.fact-box {
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  justify-content: left;
+  /*background: var(--color-base-light);*/
+}
+
+.fact-box:not(:last-child) {
+  border-right-style: solid;
+  border-color: var(--color-accent1);
+  border-width: 3px;
 }
 
 /* Ponizej 944px (Tablety) */

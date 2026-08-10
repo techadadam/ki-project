@@ -2,7 +2,7 @@
 :root {
   --color-base-dark: #0d0d0d; /*CARBON BLACK*/
   --color-base-light: #ffffff; /*PURE WHITE #EFEFEF*/
-  --color-accent1: #055724; /*BLUE*/
+  --color-accent1: #b7996a; /*BLUE*/
   --color-accent2: #f1e0c5; /*RED*/
   --color-accent3: #f85e00; /*YELLOW*/
   --color-base-grey: #f3f0e8; /*GREY*/
@@ -10,7 +10,7 @@
   --color-background: #f5f0e8; /* sticky nav color*/
   --color-shadow1: rgba(0, 0, 0, 0.03);
 
-  --font-main: "Montserrat", sans-serif;
+  --font-main: "Roboto Condensed", sans-serif;
 
   --radius--button: 50px;
   --transition: 0.3s ease;
