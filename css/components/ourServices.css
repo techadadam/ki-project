@@ -1,0 +1,114 @@
+.uslugi {
+  display: flex;
+  min-height: 490px;
+}
+
+/* LEWA STRONA */
+
+.uslugi-zdjecie {
+  width: 40%;
+  position: relative;
+  overflow: hidden;
+}
+
+.uslugi-zdjecie > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.video-link {
+  position: absolute;
+  left: 45px;
+  bottom: 35px;
+
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.play {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: black;
+  font-size: 20px;
+}
+
+/* PRAWA STRONA */
+
+.uslugi-content {
+  width: 60%;
+  padding: 50px 10%;
+  box-sizing: border-box;
+}
+
+.uslugi-content h2 {
+  margin: 0 0 20px;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+/* LISTA */
+
+.uslugi-lista {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 70px;
+}
+
+.usluga {
+  min-height: 55px;
+
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  border-bottom: 1px solid #ddd;
+}
+
+.usluga img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.usluga strong {
+  display: block;
+  font-size: 14px;
+}
+
+.usluga small {
+  display: block;
+  margin-top: 3px;
+  font-size: 11px;
+  color: #777;
+}
+
+/* PRZYCISK */
+
+.uslugi-btn {
+  display: inline-block;
+  margin-top: 25px;
+
+  padding: 15px 30px;
+
+  border: 2px solid #c4a473;
+  color: #c4a473;
+
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+}

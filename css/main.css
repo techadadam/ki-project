@@ -8,8 +8,11 @@
 @import "components/carousel.css";
 @import "components/logo.css";
 @import "components/cta.css";
-@import "components/realization.css";
+@import "components/realizations.css";
 @import "components/featuresBar.css";
+@import "components/ourServices.css";
+@import "components/ourClients.css";
+@import "components/ourConsultants.css";
 
 @import "layout/containers.css";
 @import "layout/grids.css";

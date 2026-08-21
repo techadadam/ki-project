@@ -97,15 +97,15 @@
 }
 
 .header__desktop-contact {
-  background: var(--color-base-dark);
+  background: color-mix(in srgb, var(--color-base-dark) 35%, transparent);
   border-style: solid;
   border-width: 1px;
-  border-color: var(--color-accent2);
+  border-color: var(--color-accent1);
 }
 
 .header__content__box a {
   text-transform: uppercase;
-  color: var(--color-base-light);
+  color: var(--color-accent1);
   text-decoration: none;
   cursor: pointer;
   z-index: 8;

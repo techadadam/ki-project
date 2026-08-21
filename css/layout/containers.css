@@ -1,6 +1,12 @@
+.container-d80p {
+  width: 80%;
+  max-width: 140rem;
+  margin: 0 auto;
+}
+
 .container-d90p {
   width: 90%;
-  max-width: 140rem;
+  max-width: 160rem;
   margin: 0 auto;
 }
 

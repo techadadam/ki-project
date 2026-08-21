@@ -1,0 +1,90 @@
+.kontakt {
+  background: #080808;
+  padding: 45px 3%;
+
+  display: flex;
+  gap: 20px;
+
+  color: white;
+}
+
+/* LEWA STRONA */
+
+.kontakt-intro {
+  width: 320px;
+  flex-shrink: 0;
+}
+
+.kontakt-intro h2 {
+  margin: 0 0 20px;
+  font-size: 28px;
+  line-height: 1.25;
+  font-weight: 400;
+}
+
+.kontakt-intro p {
+  margin: 0 0 35px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #bbb;
+}
+
+.kontakt-btn {
+  display: inline-block;
+
+  padding: 15px 30px;
+
+  border: 2px solid #aa8b5b;
+  color: #aa8b5b;
+
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* KARTY */
+
+.kontakt-osoba {
+  flex: 1;
+  min-height: 205px;
+
+  border: 1px solid #555;
+
+  display: flex;
+  align-items: flex-end;
+
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.kontakt-osoba img {
+  width: 45%;
+  max-height: 185px;
+  object-fit: contain;
+  object-position: bottom;
+  filter: grayscale(100%);
+}
+
+.kontakt-osoba > div {
+  align-self: center;
+}
+
+.kontakt-osoba small {
+  color: #aa8b5b;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.kontakt-osoba h3 {
+  margin: 12px 0 22px;
+  font-size: 17px;
+  color: #b99a68;
+}
+
+.kontakt-osoba p {
+  margin: 0;
+
+  font-size: 13px;
+  line-height: 1.7;
+  color: #ddd;
+}
