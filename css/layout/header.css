@@ -36,7 +36,7 @@
 }
 
 .sticky .header__content__box {
-  background-color: color-mix(in srgb, var(--color-accent1) 75%, transparent);
+  background-color: color-mix(in srgb, var(--color-base-dark) 75%, transparent);
   box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.35);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
