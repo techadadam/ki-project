@@ -54,3 +54,17 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+.reveal--fb {
+  opacity: 0;
+  transform: translateY(0px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+  will-change: opacity, transform;
+}
+
+.reveal--fb.reveal--fb--active {
+  opacity: 1;
+  transform: translateY(-60px);
+}
