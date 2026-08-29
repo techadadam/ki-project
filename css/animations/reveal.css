@@ -11,21 +11,21 @@
 .reveal--sl1 {
   transform: translateY(36px);
   transition:
-    opacity 1.2s ease,
-    transform 1.2s ease;
+    opacity 1.6s ease,
+    transform 1.6s ease;
 }
 
 .reveal--sl2 {
   transform: translateY(42px);
   transition:
-    opacity 2.4s ease,
-    transform 2.4s ease;
+    opacity 3.2s ease,
+    transform 3.2s ease;
 }
 
 .reveal--sl3 {
   transition:
-    opacity 3.2s ease,
-    transform 3.2s ease;
+    opacity 4.2s ease,
+    transform 4.2s ease;
 }
 
 .reveal.reveal--active {
@@ -67,4 +67,11 @@
 .reveal--fb.reveal--fb--active {
   opacity: 1;
   transform: translateY(-60px);
+}
+
+/* Szerokie tablety / małe laptopy - do 1200px */
+@media (max-width: 75em) {
+  .reveal--fb.reveal--fb--active {
+    transform: translateY(0px);
+  }
 }

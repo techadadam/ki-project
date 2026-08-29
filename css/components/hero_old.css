@@ -1,0 +1,237 @@
+.section__hero {
+  background-color: var(--color-background);
+  height: 100svh;
+  padding: 4.2rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  z-index: -1;
+}
+
+.hero__background {
+  position: absolute;
+  inset: 0;
+  height: 100svh; /*mobile Safari/Chrome – stabilna wysokość */
+  min-height: 520px; /*opcjonalnie: żeby nie było „mikro hero” */
+}
+
+.hero__background img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Ponizej 1200px (Szerokok. tablety) */
+
+@media (max-width: 75em) {
+  .hero__background img {
+    height: 100svh;
+  }
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.35
+  ); /*linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(0, 0, 0, 0.15) 50%,
+    rgba(0, 0, 0, 0.25) 100%
+  );*/
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  padding-top: 12rem;
+  gap: 2.4rem;
+}
+
+.hero__content p {
+  max-width: 52ch;
+  font-size: clamp(15px, 1.3vw, 18px);
+  opacity: 0.9;
+}
+
+.hero__box {
+  position: relative;
+  margin-bottom: 3.2rem;
+  padding: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  width: 100%;
+  /*background-color: var(--color-base-dark);*/
+}
+
+.hero__content h1 {
+  text-transform: uppercase;
+  font-size: clamp(3.2rem, 4.5vw, 6.6rem);
+  line-height: 1.02;
+  color: var(--color-accent1);
+  text-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+}
+
+.hero__content h2 {
+  text-transform: uppercase;
+  font-size: clamp(2.4rem, 4.5vw, 6.6rem);
+  font-weight: 400;
+  line-height: 1.02;
+  color: color-mix(in srgb, var(--color-base-light) 80%, transparent);
+  /*text-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);*/
+}
+
+.hero__buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 9vh;
+  padding: 1.2rem;
+}
+
+.button--hero {
+  height: 9.6rem;
+  line-height: 6.4rem;
+  color: var(--color-base-dark);
+  z-index: 3;
+  width: 70%;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.35);
+}
+
+.hero__buttons .button--hero {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__subtitles-gallery {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  gap: 5rem;
+}
+
+.hero__subtitle {
+  display: flex;
+  text-align: start;
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+  will-change: opacity, transform;
+}
+
+.hero__description {
+  width: 60%;
+  font-weight: 400;
+  font-size: clamp(1.6rem, 1.5vw, 2rem);
+  color: var(--color-base-light);
+}
+
+.facts-bar {
+  max-width: 60%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  font-size: clamp(1.8rem, 2vw, 2.4rem);
+  margin-bottom: 4rem;
+}
+
+.fact-box {
+  padding: 0 clamp(1.6rem, 1.5vw, 2rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  justify-content: left;
+  /*background: var(--color-base-light);*/
+}
+
+.fact-box:not(:last-child) {
+  border-right-style: solid;
+  border-color: color-mix(in srgb, var(--color-accent1) 35%, transparent);
+  border-width: 2px;
+}
+
+.fact-icon {
+  margin-bottom: 1rem;
+  height: clamp(2.4rem, 5vw, 8.8rem);
+  width: clamp(2.4rem, 5vw, 8.8rem);
+}
+
+.fact-icon figure {
+  width: 100%;
+  height: 100%;
+}
+
+.fact-icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.fact-title {
+  color: var(--color-accent1);
+  font-weight: 700;
+  font-size: clamp(2.4rem, 3.5vw, 4.2rem);
+  line-height: clamp(2.4rem, 3.5vw, 4.2rem);
+  text-transform: uppercase;
+}
+
+.fact-desc {
+  color: color-mix(in srgb, var(--color-base-light) 80%, transparent);
+  font-size: clamp(1.4rem, 1.25vw, 1.8rem);
+  text-transform: uppercase;
+}
+
+/* Ponizej 944px (Tablety) */
+@media (max-width: 59em) {
+  .hero__buttons {
+    height: clamp(2.8rem, 9vw, 4.8rem);
+  }
+
+  .button--hero,
+  .button--hero:link,
+  .btn:visited {
+    line-height: 2.8rem;
+    height: 6.4rem;
+    padding: 1.2rem 1.2rem;
+  }
+
+  .hero__content {
+    padding-top: 24rem;
+  }
+
+  .hero__box {
+    margin-bottom: 8rem;
+  }
+}
+
+/* Ponizej 544px (telefon) */
+@media (max-width: 34em) {
+  .hero__buttons {
+    height: clamp(2.8rem, 9vw, 4.8rem);
+  }
+}
+
+.sticky-trigger {
+  width: 100%;
+  height: 1px;
+  pointer-events: none;
+}

@@ -1,25 +1,180 @@
+/* =========================================================
+   ZAUFALI NAM LIDERZY RYNKU
+   Desktop + tablet + mobile
+   ========================================================= */
+
 .klienci {
-  padding: 20px 5% 30px;
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 26px 5% 34px;
+
   background: #fff;
   text-align: center;
 }
 
+/* ---------------------------------------------------------
+   NAGŁÓWEK
+   --------------------------------------------------------- */
+
 .klienci h2 {
-  margin: 0 0 25px;
-  font-size: 18px;
-  font-weight: 600;
+  margin: 0 0 28px;
+
   color: #222;
+
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 600;
 }
 
+/* ---------------------------------------------------------
+   LOGOTYPY
+   --------------------------------------------------------- */
+
 .klienci-loga {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(9, minmax(0, 1fr));
   align-items: center;
-  justify-content: space-between;
-  gap: 40px;
+
+  gap: 24px;
+
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 .klienci-loga img {
-  max-width: 120px;
-  max-height: 55px;
+  display: block;
+
+  width: 100%;
+  max-width: 145px;
+  height: 88px;
+
+  margin: 0 auto;
+
   object-fit: contain;
+}
+
+/* =========================================================
+   SZEROKIE TABLETY / MNIEJSZE LAPTOPY
+   do 1200 px
+   ========================================================= */
+
+@media (max-width: 75em) {
+  .klienci {
+    padding: 24px 4% 32px;
+  }
+
+  .klienci h2 {
+    margin-bottom: 26px;
+
+    font-size: 19px;
+  }
+
+  .klienci-loga {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 24px 28px;
+
+    max-width: 1000px;
+  }
+
+  .klienci-loga img {
+    max-width: 135px;
+    height: 72px;
+  }
+}
+
+/* =========================================================
+   TABLETY
+   do 944 px
+   ========================================================= */
+
+@media (max-width: 59em) {
+  .klienci {
+    padding: 26px 5% 34px;
+  }
+
+  .klienci h2 {
+    margin-bottom: 24px;
+
+    font-size: 18px;
+  }
+
+  .klienci-loga {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px 30px;
+
+    max-width: 720px;
+  }
+
+  .klienci-loga img {
+    max-width: 130px;
+    height: 66px;
+  }
+}
+
+/* =========================================================
+   MAŁE TABLETY
+   do 704 px
+   ========================================================= */
+
+@media (max-width: 44em) {
+  .klienci {
+    padding: 24px 24px 30px;
+  }
+
+  .klienci-loga {
+    gap: 20px 22px;
+  }
+
+  .klienci-loga img {
+    max-width: 115px;
+    height: 54px;
+  }
+}
+
+/* =========================================================
+   TELEFONY
+   do 544 px
+   ========================================================= */
+
+@media (max-width: 34em) {
+  .klienci {
+    padding: 24px 18px 28px;
+  }
+
+  .klienci h2 {
+    margin-bottom: 22px;
+
+    font-size: 17px;
+  }
+
+  .klienci-loga {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px 14px;
+
+    max-width: none;
+  }
+
+  .klienci-loga img {
+    max-width: 92px;
+    height: 48px;
+  }
+}
+
+/* =========================================================
+   BARDZO MAŁE TELEFONY
+   do 380 px
+   ========================================================= */
+
+@media (max-width: 23.75em) {
+  .klienci-loga {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 20px;
+  }
+
+  .klienci-loga img {
+    max-width: 105px;
+    height: 50px;
+  }
 }

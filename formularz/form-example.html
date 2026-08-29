@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formularz inwestycyjny - przykład</title>
+    <link rel="stylesheet" href="/formularz/form.css">
+</head>
+<body style="margin:0;font-family:Arial,sans-serif;">
+
+<section class="kontakt-form">
+    <div class="kontakt-form__header">
+        <span>KAMIŃSCY / PODŁOGI OBIEKTOWE</span>
+        <h2>Wyślij zapytanie</h2>
+        <p>Odpowiemy po analizie zakresu i dokumentacji.</p>
+    </div>
+
+    <form
+        id="investment-form"
+        action="/formularz/send.php"
+        method="post"
+        enctype="multipart/form-data"
+    >
+        <input type="hidden" name="csrf_token" value="">
+
+        <div class="form-hp" aria-hidden="true">
+            <label>
+                Twoja strona internetowa
+                <input
+                    type="text"
+                    name="website_url"
+                    tabindex="-1"
+                    autocomplete="off"
+                >
+            </label>
+        </div>
+
+        <div class="form-grid">
+            <div class="form-field">
+                <label for="firma">FIRMA</label>
+                <input id="firma" type="text" name="firma" maxlength="200" placeholder="Nazwa firmy">
+            </div>
+
+            <div class="form-field">
+                <label for="osoba">OSOBA KONTAKTOWA *</label>
+                <input id="osoba" type="text" name="osoba" maxlength="120" placeholder="Imię i nazwisko" required>
+            </div>
+
+            <div class="form-field">
+                <label for="email">E-MAIL *</label>
+                <input id="email" type="email" name="email" maxlength="254" placeholder="adres@firma.pl" required>
+            </div>
+
+            <div class="form-field">
+                <label for="telefon">TELEFON</label>
+                <input id="telefon" type="tel" name="telefon" maxlength="40" placeholder="+48">
+            </div>
+
+            <div class="form-field">
+                <label for="lokalizacja">LOKALIZACJA</label>
+                <input id="lokalizacja" type="text" name="lokalizacja" maxlength="150" placeholder="Miasto / kraj">
+            </div>
+
+            <div class="form-field">
+                <label for="termin">PLANOWANY TERMIN</label>
+                <input id="termin" type="text" name="termin" maxlength="100" placeholder="Miesiąc / rok">
+            </div>
+        </div>
+
+        <div class="form-field form-message">
+            <label for="wiadomosc">ZAKRES PRAC *</label>
+            <textarea
+                id="wiadomosc"
+                name="wiadomosc"
+                maxlength="5000"
+                minlength="10"
+                placeholder="Opis obiektu, metraż i oczekiwany zakres..."
+                required
+            ></textarea>
+        </div>
+
+        <div class="form-bottom">
+            <label class="upload-btn">
+                + DODAJ PRZEDMIAR LUB PROJEKT
+                <input
+                    type="file"
+                    name="zalacznik"
+                    accept=".pdf,.xlsx,.xls,.csv,.dwg,.dxf,.jpg,.jpeg,.png"
+                >
+            </label>
+
+            <button type="submit">WYŚLIJ ZAPYTANIE</button>
+        </div>
+
+        <div class="form-status" role="status" aria-live="polite"></div>
+
+        <p class="form-privacy">
+            Dane z formularza wykorzystujemy wyłącznie do obsługi zapytania.
+            Szczegóły znajdziesz w
+            <a href="/polityka-prywatnosci">polityce prywatności</a>.
+        </p>
+    </form>
+</section>
+
+<script src="/formularz/form.js" defer></script>
+</body>
+</html>

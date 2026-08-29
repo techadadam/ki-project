@@ -1,0 +1,9 @@
+Options -Indexes
+
+<FilesMatch "^(\.|_)">
+    Require all denied
+</FilesMatch>
+
+<FilesMatch "\.(log|ini|json|lock|md|txt)$">
+    Require all denied
+</FilesMatch>

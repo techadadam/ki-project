@@ -44,7 +44,7 @@
 
 .header__content__box:first-child {
   justify-self: start;
-  /*background-color: transparent;*/
+  background-color: transparent;
   box-shadow: none;
 }
 
@@ -295,10 +295,11 @@ body.menu-open {
     justify-content: space-between;
   }
 
-  .sticky .header__content__box {
-    background-color: transparent;
+  .sticky .header__company-name {
+    color: var(--color-base-light);
   }
 }
+
 /* Ponizej 944px (Tablety) */
 @media (max-width: 59em) {
   .header {
@@ -338,109 +339,5 @@ body.menu-open {
 @media (max-width: 34em) {
   .header {
     padding: 3.2rem 2.4rem 1.2rem 2.4rem;
-  }
-}
-
-/* =========================================================
-   RESPONSIVE HEADER - DODANE NA KOŃCU PLIKU
-   ========================================================= */
-
-/* Szerokie tablety / małe laptopy - do 1200px */
-@media (max-width: 75em) {
-  .header {
-    height: 8.8rem;
-    padding: 2.4rem 3.2rem;
-  }
-
-  .logo--large {
-    display: block;
-    width: auto;
-    max-width: 18rem;
-    max-height: 5.8rem;
-  }
-
-  .header__mobile-button {
-    width: 4.6rem;
-    height: 4.6rem;
-  }
-}
-
-/* Tablety - do 944px */
-@media (max-width: 59em) {
-  .header {
-    height: 8rem;
-    padding: 2rem 2.8rem;
-  }
-
-  .logo--large {
-    max-width: 17rem;
-    max-height: 5.2rem;
-  }
-
-  .sticky .header {
-    height: 8rem;
-    padding: 1.4rem 2.8rem;
-  }
-}
-
-/* Małe tablety - do 704px */
-@media (max-width: 44em) {
-  .header {
-    padding: 1.8rem 2.4rem;
-  }
-
-  .logo--large {
-    max-width: 16.5rem;
-  }
-}
-
-/* Smartfony - do 544px */
-@media (max-width: 34em) {
-  .header {
-    height: 7.2rem;
-    padding: 1.4rem 2rem;
-  }
-
-  .logo--large {
-    max-width: 15rem;
-    max-height: 4.6rem;
-  }
-
-  .header__mobile-button {
-    width: 4rem;
-    height: 4rem;
-  }
-
-  .header__mobile-button span {
-    width: 2.6rem;
-  }
-
-  .header__mobile-button span:nth-child(1) {
-    top: 1.25rem;
-  }
-
-  .header__mobile-button span:nth-child(2) {
-    top: 1.95rem;
-  }
-
-  .header__mobile-button span:nth-child(3) {
-    top: 2.65rem;
-  }
-
-  .sticky .header {
-    height: 7.2rem;
-    padding: 1.2rem 2rem;
-  }
-
-  .mobile-menu {
-    padding: 8rem 2rem 3rem;
-  }
-
-  .mobile-menu__list {
-    gap: 1.8rem;
-  }
-
-  .mobile-menu__link {
-    font-size: clamp(2.6rem, 8vw, 3.8rem);
   }
 }

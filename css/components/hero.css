@@ -41,7 +41,7 @@
     0,
     0,
     0,
-    0.6
+    0.35
   ); /*linear-gradient(
     90deg,
     rgba(0, 0, 0, 0.35) 0%,
@@ -143,7 +143,7 @@
 .hero__description {
   width: 60%;
   font-weight: 400;
-  font-size: clamp(1.6rem, 1.5vw, 2rem);
+  font-size: clamp(1.2rem, 2vw, 2rem);
   color: var(--color-base-light);
 }
 
@@ -172,8 +172,8 @@
 
 .fact-icon {
   margin-bottom: 1rem;
-  height: clamp(2.4rem, 5vw, 8.8rem);
-  width: clamp(2.4rem, 5vw, 8.8rem);
+  height: clamp(2.4rem, 3.5vw, 6.6rem);
+  width: clamp(2.4rem, 3.5vw, 6.6rem);
 }
 
 .fact-icon figure {
@@ -189,8 +189,8 @@
 .fact-title {
   color: var(--color-accent1);
   font-weight: 700;
-  font-size: clamp(2.4rem, 3.5vw, 4.2rem);
-  line-height: clamp(2.4rem, 3.5vw, 4.2rem);
+  font-size: clamp(2rem, 2vw, 3.2rem);
+  line-height: clamp(2rem, 2vw, 3.2rem);
   text-transform: uppercase;
 }
 
@@ -234,4 +234,439 @@
   width: 100%;
   height: 1px;
   pointer-events: none;
+}
+
+/* =========================================================
+   RESPONSIVE HERO - DODANE NA KOŃCU PLIKU
+   ========================================================= */
+
+/* Szerokie tablety / małe laptopy - do 1200px */
+@media (max-width: 75em) {
+  .section__hero {
+    padding: 3.2rem;
+  }
+
+  .hero__background img {
+    object-position: 58% center;
+  }
+
+  .hero__content {
+    width: 100%;
+    padding-top: 14rem;
+  }
+
+  .hero__box {
+    width: 100%;
+    max-width: 92rem;
+    padding: 2.4rem;
+    margin-bottom: 2.4rem;
+    gap: 2rem;
+  }
+
+  .hero__description {
+    width: 70%;
+    max-width: 68rem;
+  }
+
+  .facts-bar {
+    max-width: 78%;
+    margin-top: 9.6rem;
+    margin-bottom: 2.4rem;
+  }
+}
+
+/* Tablety - do 944px */
+@media (max-width: 59em) {
+  .section__hero {
+    height: 100svh;
+    min-height: 70rem;
+    padding: 2.4rem 2.8rem;
+  }
+
+  .hero__background,
+  .hero__background img {
+    height: 100%;
+    min-height: 70rem;
+  }
+
+  .hero__background img {
+    object-position: 60% center;
+  }
+
+  .hero__overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.72) 0%,
+      rgba(0, 0, 0, 0.52) 48%,
+      rgba(0, 0, 0, 0.18) 100%
+    );
+  }
+
+  .hero__content {
+    width: 100%;
+    height: 100%;
+    padding-top: 9rem;
+    gap: 1.6rem;
+  }
+
+  .hero__box {
+    max-width: 72rem;
+    padding: 2rem 0;
+    margin-bottom: 1.6rem;
+    gap: 1.8rem;
+  }
+
+  .hero__content h1 {
+    font-size: clamp(4rem, 7vw, 5.6rem);
+  }
+
+  .hero__content h2 {
+    font-size: clamp(3.4rem, 6vw, 5rem);
+    line-height: 1.08;
+  }
+
+  .hero__subtitles-gallery {
+    gap: 3rem;
+  }
+
+  .hero__description {
+    width: 80%;
+    max-width: 58rem;
+  }
+
+  .facts-bar {
+    width: 72%;
+    max-width: 68rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 3.6rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .fact-box {
+    min-width: 0;
+    padding: 1.6rem 2rem;
+  }
+
+  .fact-box:not(:last-child) {
+    border-right: 0;
+  }
+
+  .fact-box:nth-child(odd) {
+    border-right: 1px solid
+      color-mix(in srgb, var(--color-accent1) 35%, transparent);
+  }
+
+  .fact-box:nth-child(n + 3) {
+    border-top: 1px solid
+      color-mix(in srgb, var(--color-accent1) 20%, transparent);
+  }
+
+  .fact-icon {
+    width: 5.2rem;
+    height: 5.2rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .fact-title {
+    font-size: clamp(2.5rem, 4vw, 3.6rem);
+    line-height: 1.05;
+  }
+
+  .fact-desc {
+    font-size: 1.3rem;
+    line-height: 1.25;
+  }
+}
+
+/* Małe tablety - do 704px */
+@media (max-width: 44em) {
+  .section__hero {
+    min-height: 68rem;
+    padding: 2rem 2.4rem;
+  }
+
+  .hero__background img {
+    object-position: 56% center;
+  }
+
+  .hero__overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.82) 0%,
+      rgba(0, 0, 0, 0.62) 58%,
+      rgba(0, 0, 0, 0.3) 100%
+    );
+  }
+
+  .hero__content {
+    padding-top: 8rem;
+  }
+
+  .hero__box {
+    max-width: 100%;
+  }
+
+  .hero__description {
+    width: 88%;
+    max-width: 52rem;
+  }
+
+  .facts-bar {
+    width: 88%;
+    max-width: 56rem;
+  }
+}
+
+/* Smartfony - do 544px */
+@media (max-width: 34em) {
+  .section__hero {
+    height: 100svh;
+    min-height: 64rem;
+    padding: 1.6rem 2rem 2rem;
+    align-items: stretch;
+  }
+
+  .hero__background,
+  .hero__background img {
+    min-height: 64rem;
+  }
+
+  .hero__background img {
+    object-position: 53% center;
+  }
+
+  .hero__overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.88) 0%,
+      rgba(0, 0, 0, 0.7) 62%,
+      rgba(0, 0, 0, 0.4) 100%
+    );
+  }
+
+  .hero__content {
+    width: 100%;
+    padding-top: 7.6rem;
+    gap: 1rem;
+  }
+
+  .hero__box {
+    padding: 1.2rem 0 0;
+    margin-bottom: 1rem;
+    gap: 1.4rem;
+  }
+
+  .hero__content h1 {
+    font-size: clamp(3.4rem, 11vw, 4.6rem);
+    line-height: 1;
+  }
+
+  .hero__content h2 {
+    font-size: clamp(2.8rem, 9vw, 4rem);
+    line-height: 1.08;
+  }
+
+  .hero__subtitles-gallery {
+    gap: 2rem;
+    overflow: visible;
+  }
+
+  .hero__description {
+    width: 100%;
+    max-width: 40rem;
+  }
+
+  .facts-bar {
+    width: 100%;
+    max-width: none;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: auto;
+    margin-bottom: 0;
+  }
+
+  .fact-box {
+    padding: 1.2rem 1.2rem;
+    gap: 0.7rem;
+  }
+
+  .fact-icon {
+    width: 4.2rem;
+    height: 4.2rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .fact-title {
+    font-size: clamp(2.1rem, 6.4vw, 2.8rem);
+    line-height: 1.05;
+  }
+
+  .fact-desc {
+    font-size: 1.05rem;
+    line-height: 1.2;
+  }
+}
+
+/* Niskie telefony / obrót poziomy - zapobiega ucinaniu treści */
+@media (max-width: 59em) and (max-height: 43em) {
+  .section__hero {
+    height: auto;
+    min-height: 100svh;
+  }
+
+  .hero__content {
+    min-height: 100svh;
+    padding-bottom: 2rem;
+  }
+
+  .facts-bar {
+    margin-top: 2rem;
+  }
+}
+
+/* =========================================================
+   FIX MOBILE HERO - sekcja rosnie razem z trescia
+   Wklej NA SAMYM KONCU hero.css
+   ========================================================= */
+
+@media (max-width: 34em) {
+  /* Klucz: hero nie może mieć sztywnej wysokości 100svh,
+     bo przy niskim ekranie statystyki wychodzą poza zdjęcie. */
+  .section__hero {
+    position: relative;
+    height: auto !important;
+    min-height: 100svh;
+    padding: 0 2rem 2.4rem;
+    overflow: hidden;
+    align-items: stretch;
+  }
+
+  /* Dzięki inset: 0 tło rozciąga się do pełnej, faktycznej
+     wysokości sekcji, także gdy hero jest wyższe niż ekran. */
+  .hero__background {
+    position: absolute;
+    inset: 0;
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  .hero__background img {
+    width: 100%;
+    height: 100% !important;
+    min-height: 0 !important;
+    object-fit: cover;
+    object-position: 58% center;
+  }
+
+  .hero__overlay {
+    position: absolute;
+    inset: 0;
+    height: auto !important;
+    min-height: 100% !important;
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.78) 48%,
+      rgba(0, 0, 0, 0.48) 100%
+    );
+  }
+
+  .hero__content {
+    width: 100%;
+    height: auto !important;
+    min-height: 100svh;
+    padding-top: 10.5rem;
+    padding-bottom: 1rem;
+    gap: 2.4rem;
+    justify-content: flex-start;
+  }
+
+  .hero__box {
+    width: 100%;
+    max-width: none;
+    padding: 0;
+    margin: 0;
+    gap: 1.4rem;
+  }
+
+  .hero__content h1 {
+    font-size: clamp(3.4rem, 11vw, 4.4rem);
+    line-height: 1;
+  }
+
+  .hero__content h2 {
+    font-size: clamp(2.8rem, 8.5vw, 3.8rem);
+    line-height: 1.08;
+  }
+
+  .hero__subtitles-gallery {
+    gap: 2.2rem;
+    overflow: visible;
+  }
+
+  .hero__description {
+    width: 100%;
+    max-width: 36rem;
+  }
+
+  .facts-bar {
+    width: 100%;
+    max-width: none;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 1.2rem;
+    margin-bottom: 0;
+    align-self: stretch;
+  }
+
+  .fact-box {
+    min-width: 0;
+    padding: 1.6rem 1rem 1.8rem;
+    gap: 0.7rem;
+  }
+
+  .fact-box:not(:last-child) {
+    border-right: 0;
+  }
+
+  .fact-box:nth-child(odd) {
+    border-right: 1px solid
+      color-mix(in srgb, var(--color-accent1) 35%, transparent);
+  }
+
+  .fact-box:nth-child(n + 3) {
+    border-top: 1px solid
+      color-mix(in srgb, var(--color-accent1) 25%, transparent);
+  }
+
+  .fact-icon {
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .fact-title {
+    font-size: clamp(2rem, 6vw, 2.6rem);
+    line-height: 1.05;
+    overflow-wrap: normal;
+  }
+
+  .fact-desc {
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+}
+
+/* Bardzo wąskie telefony */
+@media (max-width: 24em) {
+  .section__hero {
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+  }
+
+  .hero__content {
+    padding-top: 9.5rem;
+  }
+
+  .fact-title {
+    font-size: 1.9rem;
+  }
 }

@@ -28,7 +28,8 @@
 .logo--invert-colors {
   filter: invert(100%);
 }
-
+/*
 .sticky .logo--sticky-invert {
   filter: invert(100%);
 }
+*/
