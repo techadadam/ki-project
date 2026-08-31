@@ -1,0 +1,344 @@
+/* =========================================================
+   REALIZACJE - LISTA
+   ========================================================= */
+
+.realizacje-listing {
+  padding: 4rem 0 6rem;
+  background: #f7f5f0;
+}
+
+.realizacje-listing__inner {
+  width: 86%;
+  max-width: 140rem;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   FILTRY
+   ========================================================= */
+
+.realizacje-filtry {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+
+  margin-bottom: 3rem;
+}
+
+.realizacje-filtry__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.realizacje-filter,
+.realizacje-location {
+  min-height: 4.6rem;
+
+  padding: 0 1.8rem;
+
+  border: 1px solid #d6d1c7;
+  background: #fff;
+
+  font: inherit;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  cursor: pointer;
+}
+
+.realizacje-filter {
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.realizacje-filter:hover,
+.realizacje-filter.active {
+  border-color: #080808;
+  background: #080808;
+  color: #fff;
+}
+
+.realizacje-location {
+  min-width: 22rem;
+  color: #111;
+}
+
+/* =========================================================
+   GRID
+   ========================================================= */
+
+.realizacje-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+/* =========================================================
+   KARTA
+   ========================================================= */
+
+.realizacja-card {
+  min-width: 0;
+
+  border: 1px solid #ddd8cf;
+  background: #fff;
+}
+
+.realizacja-card[hidden] {
+  display: none;
+}
+
+/* ZDJĘCIE */
+
+.realizacja-card__image {
+  position: relative;
+
+  height: 22rem;
+
+  overflow: hidden;
+}
+
+.realizacja-card__image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.35s ease;
+}
+
+.realizacja-card:hover .realizacja-card__image img {
+  transform: scale(1.025);
+}
+
+.realizacja-card__image > span {
+  position: absolute;
+  top: 1.2rem;
+  left: 1.2rem;
+
+  padding: 0.6rem 1rem;
+
+  background: #b9945e;
+  color: #fff;
+
+  font-size: 1rem;
+  line-height: 1;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* TREŚĆ */
+
+.realizacja-card__content {
+  padding: 1.8rem;
+}
+
+.realizacja-card__content h3 {
+  margin: 0 0 0.5rem;
+
+  color: #111;
+
+  font-size: 1.6rem;
+  line-height: 1.25;
+}
+
+.realizacja-card__content p {
+  margin: 0;
+
+  color: #666;
+
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+/* META */
+
+.realizacja-card__meta {
+  display: flex;
+  gap: 2.4rem;
+
+  margin-top: 1.6rem;
+
+  color: #555;
+
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.realizacja-card__meta span::before {
+  content: "◫";
+
+  margin-right: 0.7rem;
+
+  color: #b9945e;
+}
+
+/* BRAK WYNIKÓW */
+
+.realizacje-empty {
+  margin: 4rem 0 0;
+
+  text-align: center;
+
+  color: #777;
+
+  font-size: 1.4rem;
+}
+
+/* =========================================================
+   RESPONSYWNOŚĆ
+   ========================================================= */
+
+/* =========================================================
+   SZEROKIE TABLETY / MNIEJSZE LAPTOPY
+   do 1200px
+   ========================================================= */
+
+@media (max-width: 75em) {
+  .realizacje-listing__inner {
+    width: 90%;
+  }
+
+  .realizacje-grid {
+    gap: 1.6rem;
+  }
+
+  .realizacja-card__image {
+    height: 20rem;
+  }
+
+  .realizacje-filtry {
+    align-items: flex-start;
+  }
+}
+
+/* =========================================================
+   TABLETY
+   do 944px
+   ========================================================= */
+
+@media (max-width: 59em) {
+  .realizacje-listing {
+    padding: 3.5rem 0 5rem;
+  }
+
+  .realizacje-filtry {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .realizacje-location {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .realizacje-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .realizacja-card__image {
+    height: 22rem;
+  }
+}
+
+/* =========================================================
+   MAŁE TABLETY
+   do 704px
+   ========================================================= */
+
+@media (max-width: 44em) {
+  .realizacje-listing__inner {
+    width: auto;
+    margin: 0 2.4rem;
+  }
+
+  .realizacje-filtry__buttons {
+    gap: 0.8rem;
+  }
+
+  .realizacje-filter {
+    min-height: 4.2rem;
+    padding: 0 1.4rem;
+
+    font-size: 1rem;
+  }
+
+  .realizacja-card__image {
+    height: 19rem;
+  }
+}
+
+/* =========================================================
+   TELEFONY
+   do 544px
+   ========================================================= */
+
+@media (max-width: 34em) {
+  .realizacje-listing {
+    padding: 2.8rem 0 4rem;
+  }
+
+  .realizacje-listing__inner {
+    margin: 0 1.8rem;
+  }
+
+  .realizacje-filtry {
+    margin-bottom: 2.2rem;
+  }
+
+  .realizacje-filtry__buttons {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    width: 100%;
+  }
+
+  .realizacje-filter {
+    width: 100%;
+
+    padding: 0 1rem;
+  }
+
+  .realizacje-grid {
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+  }
+
+  .realizacja-card__image {
+    height: 21rem;
+  }
+
+  .realizacja-card__content {
+    padding: 1.6rem;
+  }
+
+  .realizacja-card__content h3 {
+    font-size: 1.5rem;
+  }
+}
+
+/* =========================================================
+   BARDZO MAŁE TELEFONY
+   do 384px
+   ========================================================= */
+
+@media (max-width: 24em) {
+  .realizacje-listing__inner {
+    margin: 0 1.6rem;
+  }
+
+  .realizacje-filtry__buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .realizacja-card__image {
+    height: 19rem;
+  }
+}

@@ -28,6 +28,12 @@
     transform 4.2s ease;
 }
 
+.reveal--sl4 {
+  transition:
+    opacity 5.2s ease,
+    transform 5.2s ease;
+}
+
 .reveal.reveal--active {
   opacity: 1;
   transform: translateY(0);

@@ -5,15 +5,18 @@
 
 @import "components/button.css";
 @import "components/hero.css";
+@import "components/hero-subpage.css";
 @import "components/carousel.css";
 @import "components/logo.css";
 @import "components/cta.css";
 @import "components/realizations.css";
+@import "components/realizations-subpage.css";
 @import "components/featuresBar.css";
 @import "components/ourServices.css";
 @import "components/ourClients.css";
 @import "components/ourConsultants.css";
 @import "components/kontaktForm.css";
+/*@import "components/realizacjeHero.css";*/
 
 @import "layout/containers.css";
 @import "layout/grids.css";
