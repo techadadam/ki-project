@@ -1,0 +1,238 @@
+/* =========================================================
+   STATYSTYKI - PODSTRONA REALIZACJE
+   ========================================================= */
+
+.realizacje-statystyki {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+
+  width: 100%;
+  padding: 2.8rem 6%;
+  box-sizing: border-box;
+
+  background: #080808;
+  color: #fff;
+}
+
+/* =========================================================
+   POJEDYNCZY ELEMENT
+   ========================================================= */
+
+.realizacje-stat {
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.8rem;
+
+  padding: 0 2.4rem;
+
+  border-left: 1px solid rgba(185, 154, 104, 0.3);
+}
+
+.realizacje-stat:first-child {
+  border-left: 0;
+}
+
+/* =========================================================
+   IKONA
+   ========================================================= */
+
+.realizacje-stat img {
+  flex: 0 0 auto;
+
+  width: 4.8rem;
+  height: 4.8rem;
+
+  object-fit: contain;
+}
+
+/* =========================================================
+   TEKST
+   ========================================================= */
+
+.realizacje-stat > div {
+  min-width: 0;
+}
+
+.realizacje-stat strong {
+  display: block;
+
+  margin-bottom: 0.5rem;
+
+  color: #c19a5f;
+
+  font-size: clamp(1.8rem, 1.7vw, 2.6rem);
+  line-height: 1.05;
+  font-weight: 700;
+
+  text-transform: uppercase;
+}
+
+.realizacje-stat span {
+  display: block;
+
+  color: #ddd;
+
+  font-size: 1rem;
+  line-height: 1.35;
+  font-weight: 500;
+
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   RESPONSYWNOŚĆ
+   ========================================================= */
+
+/* =========================================================
+   SZEROKIE TABLETY / MNIEJSZE LAPTOPY
+   do 1200px
+   ========================================================= */
+
+@media (max-width: 75em) {
+  .realizacje-statystyki {
+    padding: 2.6rem 4%;
+  }
+
+  .realizacje-stat {
+    gap: 1.4rem;
+    padding: 0 1.6rem;
+  }
+
+  .realizacje-stat img {
+    width: 4.2rem;
+    height: 4.2rem;
+  }
+
+  .realizacje-stat span {
+    font-size: 0.9rem;
+  }
+}
+
+/* =========================================================
+   TABLETY
+   do 944px
+   ========================================================= */
+
+@media (max-width: 59em) {
+  .realizacje-statystyki {
+    grid-template-columns: repeat(3, 1fr);
+
+    padding: 2.4rem 5%;
+  }
+
+  .realizacje-stat {
+    min-height: 10rem;
+
+    padding: 1.8rem 2rem;
+
+    border-left: 1px solid rgba(185, 154, 104, 0.3);
+  }
+
+  .realizacje-stat:nth-child(3n + 1) {
+    border-left: 0;
+  }
+
+  .realizacje-stat:nth-child(-n + 3) {
+    border-bottom: 1px solid rgba(185, 154, 104, 0.2);
+  }
+}
+
+/* =========================================================
+   MAŁE TABLETY
+   do 704px
+   ========================================================= */
+
+@media (max-width: 44em) {
+  .realizacje-stat {
+    gap: 1.2rem;
+    padding: 1.6rem;
+  }
+
+  .realizacje-stat img {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .realizacje-stat strong {
+    font-size: 1.8rem;
+  }
+}
+
+/* =========================================================
+   TELEFONY
+   do 544px
+   ========================================================= */
+
+@media (max-width: 34em) {
+  .realizacje-statystyki {
+    grid-template-columns: repeat(2, 1fr);
+
+    padding: 2rem 1.8rem;
+  }
+
+  .realizacje-stat {
+    min-height: 11rem;
+
+    justify-content: flex-start;
+
+    padding: 1.8rem 1rem;
+
+    border-left: 0;
+    border-bottom: 1px solid rgba(185, 154, 104, 0.2);
+  }
+
+  .realizacje-stat:nth-child(even) {
+    border-left: 1px solid rgba(185, 154, 104, 0.3);
+  }
+
+  .realizacje-stat:last-child {
+    grid-column: 1 / -1;
+
+    justify-content: center;
+
+    border-left: 0;
+    border-bottom: 0;
+  }
+
+  .realizacje-stat img {
+    width: 3.8rem;
+    height: 3.8rem;
+  }
+
+  .realizacje-stat strong {
+    font-size: 1.7rem;
+  }
+
+  .realizacje-stat span {
+    font-size: 0.85rem;
+  }
+}
+
+/* =========================================================
+   BARDZO MAŁE TELEFONY
+   do 384px
+   ========================================================= */
+
+@media (max-width: 24em) {
+  .realizacje-statystyki {
+    grid-template-columns: 1fr;
+  }
+
+  .realizacje-stat,
+  .realizacje-stat:nth-child(even),
+  .realizacje-stat:last-child {
+    grid-column: auto;
+
+    justify-content: flex-start;
+
+    border-left: 0;
+    border-bottom: 1px solid rgba(185, 154, 104, 0.2);
+  }
+
+  .realizacje-stat:last-child {
+    border-bottom: 0;
+  }
+}
