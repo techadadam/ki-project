@@ -1,0 +1,118 @@
+/* Sekcję wstaw poza kontenerem ograniczającym szerokość strony. */
+.contact-strip,
+.contact-strip * {
+  box-sizing: border-box;
+}
+
+.contact-strip {
+  width: 100%;
+  padding: 50px 3%;
+  background: #f5f1e9;
+  color: #242424;
+  font-family: "Montserrat", Arial, sans-serif;
+  line-height: 1.5;
+}
+
+.contact-strip__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  padding: 30px 0;
+  border-top: 1px solid #b69a65;
+  border-bottom: 1px solid #b69a65;
+}
+
+.contact-strip__item {
+  min-width: 0;
+  padding: 20px 24px;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+/* Linie tylko pomiędzy kolumnami. */
+.contact-strip__item + .contact-strip__item {
+  border-left: 1px solid #ded1bd;
+}
+
+.contact-strip__item img {
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 16px;
+}
+
+.contact-strip__item h2 {
+  margin: 0 0 10px;
+  color: #876a3b;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.contact-strip__item p {
+  margin: 0;
+  font-size: 18px;
+}
+.contact-strip__item a {
+  color: inherit;
+  text-decoration: none;
+}
+.contact-strip__item a:hover {
+  text-decoration: underline;
+}
+.contact-strip__item a:focus-visible {
+  outline: 2px solid #876a3b;
+  outline-offset: 5px;
+}
+
+/* RESPONSYWNOŚĆ */
+
+/* Mniejsze komputery */
+@media (max-width: 1200px) {
+  .contact-strip__item {
+    padding: 20px 16px;
+  }
+  .contact-strip__item p {
+    font-size: 16px;
+  }
+}
+
+/* Tablety: nadal trzy kolumny, mniejsze odstępy i ikony. */
+@media (max-width: 992px) {
+  .contact-strip {
+    padding: 36px 24px;
+  }
+  .contact-strip__grid {
+    padding: 20px 0;
+  }
+  .contact-strip__item img {
+    width: 64px;
+    height: 64px;
+  }
+  .contact-strip__item h2 {
+    font-size: 14px;
+  }
+}
+
+/* Małe tablety i telefony: jedna kolumna. */
+@media (max-width: 768px) {
+  .contact-strip__grid {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 0;
+  }
+  .contact-strip__item {
+    padding: 28px 12px;
+  }
+  .contact-strip__item + .contact-strip__item {
+    border-left: 0;
+    border-top: 1px solid #ded1bd;
+  }
+}
+
+/* Małe telefony */
+@media (max-width: 480px) {
+  .contact-strip {
+    padding: 24px 16px;
+  }
+  .contact-strip__item {
+    padding: 24px 8px;
+  }
+}

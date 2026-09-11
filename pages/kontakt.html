@@ -86,7 +86,7 @@
     <script defer src="../js/script.js"></script>
     <script defer src="../js/reveal.js"></script>
     <script defer src="../js/reaveal-fb.js"></script>
-    <script defer src="../js/stickyHeader.js"></script>
+    <script defer src="../js/stickyHeader-subpage.js"></script>
     <script defer src="../js/playSubtitlesGallery.js"></script>
     <script defer src="../js/realizations-filtering.js"></script>
   </head>
@@ -121,7 +121,7 @@
               </li>
 
               <li class="header__menulist__element header__hover">
-                <a href="#realizations" class="header__menulist__link"
+                <a href="realizacje.html" class="header__menulist__link"
                   >Realizacje</a
                 >
               </li>
@@ -131,9 +131,7 @@
                 >
               </li>
               <li class="header__menulist__element header__hover">
-                <a href="#realizations" class="header__menulist__link"
-                  >Kontakt</a
-                >
+                <a href="#cta" class="header__menulist__link">Kontakt</a>
               </li>
             </ul>
           </nav>
@@ -173,7 +171,7 @@
             </li>
 
             <li>
-              <a href="#realizations" class="mobile-menu__link">Realizacje</a>
+              <a href="realizacje.html" class="mobile-menu__link">Realizacje</a>
             </li>
             <li>
               <a href="#cta" class="mobile-menu__link">Kontakt</a>
@@ -184,396 +182,215 @@
     </header>
 
     <main>
-      <section class="section__hero section__hero--subpage">
-        <div class="hero__background">
-          <img
-            src="../img/CG01_Hero_eleganckie_wnetrze_nowoczesnego_lobby.webp"
-            alt="Realizacje Kamińscy"
-          />
+      <section class="section__hero--subpage">
+        <div class="section__hero--subpage__container">
+          <nav
+            class="section__hero--subpage__breadcrumb"
+            aria-label="Ścieżka nawigacji"
+          >
+            <a href="../index.html">Strona główna</a>
+            <span aria-hidden="true">/</span>
+            <span aria-current="page">Kontakt</span>
+          </nav>
+
+          <h1 class="section__hero--subpage__title">
+            <strong>Porozmawiajmy</strong>
+            <span>o Twojej inwestycji</span>
+          </h1>
+
+          <p class="section__hero--subpage__description">
+            Masz pytania lub chcesz wycenić prace?<br />
+            Skontaktuj się z nami.
+          </p>
         </div>
+      </section>
 
-        <div class="hero__overlay"></div>
+      <section class="contact-strip" aria-label="Dane kontaktowe">
+        <div class="contact-strip__grid">
+          <div class="contact-strip__item">
+            <img src="../img/icon/telefon.webp" alt="" width="80" height="80" />
+            <h2>TELEFON</h2>
+            <!-- Podmień numer również w href. -->
+            <p><a href="tel:+48000000000">+48 123 456 789</a></p>
+          </div>
 
-        <div class="hero__content">
-          <div class="hero__box">
-            <h1>REALIZACJE</h1>
+          <div class="contact-strip__item">
+            <img src="../img/icon/email.webp" alt="" width="80" height="80" />
+            <h2>E-MAIL</h2>
+            <!-- Podmień adres również w href. -->
+            <p>
+              <a href="mailto:kontakt@example.com"
+                >inwestycje@kaminscypodlogi.pl</a
+              >
+            </p>
+          </div>
 
-            <div class="hero__subtitles-gallery">
-              <h2 class="hero__subtitle hero__subtitle--subpage">
-                Doświadczenie, które widać w każdym metrze.
-              </h2>
-
-              <p class="hero__description">
-                Zobacz wybrane inwestycje, które zrealizowaliśmy w Polsce i
-                Europie dla wymagających klientów.
-              </p>
-            </div>
+          <div class="contact-strip__item">
+            <img src="../img/icon/godziny.webp" alt="" width="80" height="80" />
+            <h2>GODZINY OTWARCIA</h2>
+            <p>PN. - PT. 9:00 - 17:30</p>
           </div>
         </div>
       </section>
 
-      <!-- =========================================================
-     REALIZACJE - FILTRY + 12 KART
-     ========================================================= -->
-
-      <section class="realizacje-listing" id="realizacje">
-        <div class="realizacje-listing__inner">
-          <div class="realizacje-filtry">
-            <div class="realizacje-filtry__buttons">
-              <button
-                class="realizacje-filter active"
-                type="button"
-                data-filter="all"
-              >
-                Wszystkie
-              </button>
-
-              <button
-                class="realizacje-filter"
-                type="button"
-                data-filter="hotel"
-              >
-                Hotele
-              </button>
-
-              <button
-                class="realizacje-filter"
-                type="button"
-                data-filter="sklepy"
-              >
-                Sklepy i galerie
-              </button>
-
-              <button
-                class="realizacje-filter"
-                type="button"
-                data-filter="publiczne"
-              >
-                Obiekty publiczne
-              </button>
-
-              <button
-                class="realizacje-filter"
-                type="button"
-                data-filter="biura"
-              >
-                Biura
-              </button>
-
-              <button
-                class="realizacje-filter"
-                type="button"
-                data-filter="inne"
-              >
-                Inne
-              </button>
-            </div>
-
-            <select
-              class="realizacje-location"
-              aria-label="Filtruj po lokalizacji"
-            >
-              <option value="all">Wszystkie lokalizacje</option>
-              <option value="polska">Polska</option>
-              <option value="uk">Wielka Brytania</option>
-              <option value="niemcy">Niemcy</option>
-              <option value="wlochy">Włochy</option>
-            </select>
-          </div>
-
-          <div class="realizacje-grid">
-            <article
-              class="realizacja-card"
-              data-category="hotel"
-              data-location="uk"
-            >
-              <div class="realizacja-card__image">
-                <img
-                  src="../img/realizations/CG1_realization_Mariott.png"
-                  alt="Hotel Marriott Edynburg"
-                />
-                <span>Hotel</span>
-              </div>
-
-              <div class="realizacja-card__content">
-                <h3>Hotel Marriott</h3>
-                <p>Edynburg, Wielka Brytania</p>
-
-                <div class="realizacja-card__meta">
-                  <span>4 500 m²</span>
-                  <span>2024</span>
-                </div>
-              </div>
-            </article>
-
-            <article
-              class="realizacja-card"
-              data-category="hotel"
-              data-location="uk"
-            >
-              <div class="realizacja-card__image">
-                <img
-                  src="../img/realizations/CG8_realization.png"
-                  alt="Hotel w Liverpoolu"
-                />
-                <span>Hotel</span>
-              </div>
-
-              <div class="realizacja-card__content">
-                <h3>Hotel w Liverpoolu</h3>
-                <p>Liverpool, Wielka Brytania</p>
-
-                <div class="realizacja-card__meta">
-                  <span>3 200 m²</span>
-                  <span>2024</span>
-                </div>
-              </div>
-            </article>
-
-            <article
-              class="realizacja-card"
-              data-category="hotel"
-              data-location="wlochy"
-            >
-              <div class="realizacja-card__image">
-                <img
-                  src="../img/realizations/CG7_realization.png"
-                  alt="Hotel w Rzymie"
-                />
-                <span>Hotel</span>
-              </div>
-
-              <div class="realizacja-card__content">
-                <h3>Hotel w Rzymie</h3>
-                <p>Rzym, Włochy</p>
-
-                <div class="realizacja-card__meta">
-                  <span>2 800 m²</span>
-                  <span>2024</span>
-                </div>
-              </div>
-            </article>
-
-            <article
-              class="realizacja-card"
-              data-category="hotel"
-              data-location="polska"
-            >
-              <div class="realizacja-card__image">
-                <img
-                  src="../img/realizations/CG2_realization_HotelPremier.png"
-                  alt="Hotel Premier Kraków"
-                />
-                <span>Hotel</span>
-              </div>
-
-              <div class="realizacja-card__content">
-                <h3>Hotel Premier Kraków</h3>
-                <p>Kraków, Polska</p>
-
-                <div class="realizacja-card__meta">
-                  <span>1 950 m²</span>
-                  <span>2023</span>
-                </div>
-              </div>
-            </article>
-
-            <article
-              class="realizacja-card"
-              data-category="hotel"
-              data-location="polska"
-            >
-              <div class="realizacja-card__image">
-                <img
-                  src="../img/realizations/CG6_realization.png"
-                  alt="Hotel CFI Warszawa"
-                />
-                <span>Hotel</span>
-              </div>
-
-              <div class="realizacja-card__content">
-                <h3>Hotel CFI Warszawa</h3>
-                <p>Warszawa, Polska</p>
-
-                <div class="realizacja-card__meta">
-                  <span>2 600 m²</span>
-                  <span>2023</span>
-                </div>
-              </div>
-            </article>
-
-            <article
-              class="realizacja-card"
-              data-category="publiczne"
-              data-location="niemcy"
-            >
-              <div class="realizacja-card__image">
-                <img
-                  src="../img/realizations/CG4_realization_OsrUch.png"
-                  alt="Ośrodek dla uchodźców Monachium"
-                />
-                <span>Obiekt publiczny</span>
-              </div>
-
-              <div class="realizacja-card__content">
-                <h3>Ośrodek dla uchodźców</h3>
-                <p>Monachium, Niemcy</p>
-
-                <div class="realizacja-card__meta">
-                  <span>6 700 m²</span>
-                  <span>2023</span>
-                </div>
-              </div>
-            </article>
-
-            <article
-              class="realizacja-card"
-              data-category="sklepy"
-              data-location="polska"
-            >
-              <div class="realizacja-card__image">
-                <img
-                  src="../img/realizations/CG3_realization_dmDrogerie.png"
-                  alt="Sieć sklepów dm"
-                />
-                <span>Sklepy</span>
-              </div>
-
-              <div class="realizacja-card__content">
-                <h3>Sieć sklepów dm</h3>
-                <p>Polska</p>
-
-                <div class="realizacja-card__meta">
-                  <span>25 000 m²+</span>
-                  <span>2022–2024</span>
-                </div>
-              </div>
-            </article>
-
-            <article
-              class="realizacja-card"
-              data-category="sklepy"
-              data-location="polska"
-            >
-              <div class="realizacja-card__image">
-                <img
-                  src="../img/realizations/CG11_realization.png"
-                  alt="Sklepy TEDi w Polsce"
-                />
-                <span>Sklepy</span>
-              </div>
-
-              <div class="realizacja-card__content">
-                <h3>Sklepy TEDi w Polsce</h3>
-                <p>Różne lokalizacje</p>
-
-                <div class="realizacja-card__meta">
-                  <span>30 000 m²+</span>
-                  <span>2022–2024</span>
-                </div>
-              </div>
-            </article>
-
-            <article
-              class="realizacja-card"
-              data-category="sklepy"
-              data-location="polska"
-            >
-              <div class="realizacja-card__image">
-                <img
-                  src="../img/realizations/CG9_realization.png"
-                  alt="Sklepy KiK w Polsce"
-                />
-                <span>Sklepy</span>
-              </div>
-
-              <div class="realizacja-card__content">
-                <h3>Sklepy KiK w Polsce</h3>
-                <p>Różne lokalizacje</p>
-
-                <div class="realizacja-card__meta">
-                  <span>20 000 m²+</span>
-                  <span>2022–2024</span>
-                </div>
-              </div>
-            </article>
-
-            <article
-              class="realizacja-card"
-              data-category="sklepy"
-              data-location="polska"
-            >
-              <div class="realizacja-card__image">
-                <img
-                  src="../img/realizations/CG5_realization_Jysk.png"
-                  alt="Sieć sklepów JYSK"
-                />
-                <span>Sklepy</span>
-              </div>
-
-              <div class="realizacja-card__content">
-                <h3>Sieć sklepów JYSK</h3>
-                <p>Różne lokalizacje</p>
-
-                <div class="realizacja-card__meta">
-                  <span>15 000 m²+</span>
-                  <span>2022–2024</span>
-                </div>
-              </div>
-            </article>
-
-            <article
-              class="realizacja-card"
-              data-category="sklepy"
-              data-location="polska"
-            >
-              <div class="realizacja-card__image">
-                <img
-                  src="../img/realizations/CG12_realization.png"
-                  alt="Sklepy Woolworth"
-                />
-                <span>Sklepy</span>
-              </div>
-
-              <div class="realizacja-card__content">
-                <h3>Sklepy Woolworth</h3>
-                <p>Polska</p>
-
-                <div class="realizacja-card__meta">
-                  <span>8 000 m²+</span>
-                  <span>2023–2024</span>
-                </div>
-              </div>
-            </article>
-
-            <article
-              class="realizacja-card"
-              data-category="sklepy"
-              data-location="polska"
-            >
-              <div class="realizacja-card__image">
-                <img
-                  src="../img/realizations/CG10_realization.png"
-                  alt="KappAhl Gdańsk"
-                />
-                <span>Sklepy</span>
-              </div>
-
-              <div class="realizacja-card__content">
-                <h3>KappAhl Gdańsk</h3>
-                <p>Gdańsk, Polska</p>
-
-                <div class="realizacja-card__meta">
-                  <span>1 200 m²</span>
-                  <span>2023</span>
-                </div>
-              </div>
-            </article>
-          </div>
-
-          <p class="realizacje-empty" hidden>
-            Brak realizacji spełniających wybrane kryteria.
+      <section class="advisors" aria-labelledby="advisors-title">
+        <div class="advisors__container">
+          <h2 id="advisors-title">Nasi doradcy</h2>
+          <p class="advisors__intro">
+            Skontaktuj się bezpośrednio z osobą, która pomoże w Twojej sprawie.
           </p>
+
+          <div class="advisors__grid">
+            <!-- Doradca 1 — podmień zdjęcie, dane oraz href telefonu i e-maila -->
+            <article class="advisor">
+              <img
+                class="advisor__photo"
+                src="../img/consultants/CG201_consultant1.png"
+                alt="Portret doradcy"
+                width="240"
+                height="300"
+                loading="lazy"
+              />
+
+              <div class="advisor__info">
+                <h3>Jakub Kamiński</h3>
+                <p class="advisor__role">Doradca</p>
+                <p class="advisor__scope">ds. inwestycji</p>
+
+                <div class="advisor__contact">
+                  <a href="tel:+48000000000">+48 000 000 000</a>
+                  <a href="mailto:doradca1@example.com">doradca1@example.com</a>
+                </div>
+
+                <div class="advisor__actions">
+                  <a class="advisor__button" href="tel:+48000000000">
+                    Zadzwoń ↗
+                  </a>
+                  <a href="mailto:doradca1@example.com">Napisz ↗</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Doradca 2 -->
+            <article class="advisor">
+              <img
+                class="advisor__photo"
+                src="../img/consultants/CG202_consultant2.png"
+                alt="Portret doradcy 2"
+                width="240"
+                height="300"
+                loading="lazy"
+              />
+
+              <div class="advisor__info">
+                <h3>Imię i nazwisko</h3>
+                <p class="advisor__role">Stanowisko</p>
+                <p class="advisor__scope">Zakres doradztwa</p>
+
+                <div class="advisor__contact">
+                  <a href="tel:+48000000000">+48 000 000 000</a>
+                  <a href="mailto:doradca2@example.com">doradca2@example.com</a>
+                </div>
+
+                <div class="advisor__actions">
+                  <a class="advisor__button" href="tel:+48000000000">
+                    Zadzwoń ↗
+                  </a>
+                  <a href="mailto:doradca2@example.com">Napisz ↗</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Doradca 3 -->
+            <article class="advisor">
+              <img
+                class="advisor__photo"
+                src="../img/consultants/CG203_consultant3.png"
+                alt="Portret doradcy 3"
+                width="240"
+                height="300"
+                loading="lazy"
+              />
+
+              <div class="advisor__info">
+                <h3>Imię i nazwisko</h3>
+                <p class="advisor__role">Stanowisko</p>
+                <p class="advisor__scope">Zakres doradztwa</p>
+
+                <div class="advisor__contact">
+                  <a href="tel:+48000000000">+48 000 000 000</a>
+                  <a href="mailto:doradca3@example.com">doradca3@example.com</a>
+                </div>
+
+                <div class="advisor__actions">
+                  <a class="advisor__button" href="tel:+48000000000">
+                    Zadzwoń ↗
+                  </a>
+                  <a href="mailto:doradca3@example.com">Napisz ↗</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Doradca 4 -->
+            <article class="advisor">
+              <img
+                class="advisor__photo"
+                src="../img/consultants/CG201_consultant1.png"
+                alt="Portret doradcy 4"
+                width="240"
+                height="300"
+                loading="lazy"
+              />
+
+              <div class="advisor__info">
+                <h3>Imię i nazwisko</h3>
+                <p class="advisor__role">Stanowisko</p>
+                <p class="advisor__scope">Zakres doradztwa</p>
+
+                <div class="advisor__contact">
+                  <a href="tel:+48000000000">+48 000 000 000</a>
+                  <a href="mailto:doradca4@example.com">doradca4@example.com</a>
+                </div>
+
+                <div class="advisor__actions">
+                  <a class="advisor__button" href="tel:+48000000000">
+                    Zadzwoń ↗
+                  </a>
+                  <a href="mailto:doradca4@example.com">Napisz ↗</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Doradca 5 -->
+            <article class="advisor">
+              <img
+                class="advisor__photo"
+                src="../img/consultants/CG202_consultant2.png"
+                alt="Portret doradcy 5"
+                width="240"
+                height="300"
+                loading="lazy"
+              />
+
+              <div class="advisor__info">
+                <h3>Imię i nazwisko</h3>
+                <p class="advisor__role">Stanowisko</p>
+                <p class="advisor__scope">Zakres doradztwa</p>
+
+                <div class="advisor__contact">
+                  <a href="tel:+48000000000">+48 000 000 000</a>
+                  <a href="mailto:doradca5@example.com">doradca5@example.com</a>
+                </div>
+
+                <div class="advisor__actions">
+                  <a class="advisor__button" href="tel:+48000000000">
+                    Zadzwoń ↗
+                  </a>
+                  <a href="mailto:doradca5@example.com">Napisz ↗</a>
+                </div>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -639,46 +456,98 @@
         </div>
       </section>
 
-      <section class="realizacje-cta" id="kontakt-realizacje">
-        <div class="realizacje-cta__content">
-          <span class="realizacje-cta__label"> REALIZUJESZ INWESTYCJĘ? </span>
-
-          <h2>
-            Porozmawiajmy<br />
-            o Twoim projekcie
-          </h2>
-
-          <p>
-            Prześlij przedmiar lub dokumentację, a przygotujemy ofertę
-            dopasowaną do Twoich potrzeb.
-          </p>
-
-          <div class="realizacje-cta__buttons">
-            <a
-              href="#kontakt"
-              class="realizacje-cta__btn realizacje-cta__btn--gold"
-            >
-              <span>ZAPYTAJ O WYCENĘ</span>
-              <span class="realizacje-cta__arrow">→</span>
-            </a>
-
-            <a href="#kontakt" class="realizacje-cta__btn">
-              <span>PRZEŚLIJ DOKUMENTACJĘ</span>
-
-              <img
-                src="../img/icon/CG102_przeslijIcon.png"
-                alt=""
-                class="realizacje-cta__icon"
-              />
-            </a>
+      <section class="kontakt-form">
+        <div class="container-d80p">
+          <div class="kontakt-form__header">
+            <span>KAMIŃSCY / PODŁOGI OBIEKTOWE</span>
+            <h2>Wyślij zapytanie</h2>
+            <p>Odpowiemy po analizie zakresu i dokumentacji.</p>
           </div>
-        </div>
 
-        <div class="realizacje-cta__image">
-          <img
-            src="../img/CG103_pracaPodloga.png"
-            alt="Profesjonalne prace podłogowe"
-          />
+          <form>
+            <div class="form-grid">
+              <div class="form-field">
+                <label>FIRMA</label>
+                <input type="text" placeholder="Nazwa firmy" />
+              </div>
+
+              <div class="form-field">
+                <label>OSOBA KONTAKTOWA</label>
+                <input type="text" placeholder="Imię i nazwisko" />
+              </div>
+
+              <div class="form-field">
+                <label>E-MAIL</label>
+                <input type="email" placeholder="adres@firma.pl" />
+              </div>
+
+              <div class="form-field">
+                <label>TELEFON</label>
+                <input type="tel" placeholder="+48" />
+              </div>
+
+              <div class="form-field">
+                <label>LOKALIZACJA</label>
+                <input type="text" placeholder="Miasto / kraj" />
+              </div>
+
+              <div class="form-field">
+                <label>PLANOWANY TERMIN</label>
+                <input type="text" placeholder="Miesiąc / rok" />
+              </div>
+            </div>
+
+            <div class="form-field form-message">
+              <label>ZAKRES PRAC</label>
+              <textarea
+                placeholder="Opis obiektu, metraż i oczekiwany zakres..."
+              ></textarea>
+            </div>
+
+            <div class="form-bottom">
+              <label class="upload-btn">
+                + DODAJ PRZEDMIAR LUB PROJEKT
+                <input type="file" />
+              </label>
+
+              <button type="submit">WYŚLIJ ZAPYTANIE</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="location" aria-labelledby="location-title">
+        <div class="location__layout">
+          <div class="location__info">
+            <p class="location__label">SIEDZIBA FIRMY</p>
+            <h2 id="location-title">Znajdziesz nas<br />w Brodnicy</h2>
+            <address>
+              <strong>Kamińscy spółka komandytowa</strong><br />
+              ul. Kolejowa 1<br />
+              87-300 Brodnica
+            </address>
+            <p class="location__note">Przed wizytą skontaktuj się z nami.</p>
+            <a
+              class="location__button"
+              href="https://www.google.com/maps/dir/?api=1&amp;destination=Ruckzuck%20Pawilon%20Handlowy%20Terry%20Kolejowa%201%20Brodnica"
+              target="_blank"
+              rel="noopener noreferrer"
+              >WYZNACZ TRASĘ ↗</a
+            >
+          </div>
+
+          <div class="location__map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2386.4627500724932!2d19.39991567698339!3d53.26332788093175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471d1f68e11b307b%3A0xb0b5f848227c2020!2sRuckzuck%2C%20Pawilon%20Handlowy%20Terry.%20Kami%C5%84ski%20Z.!5e0!3m2!1spl!2spl!4v1757614338562!5m2!1spl!2spl"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            >
+            </iframe>
+          </div>
         </div>
       </section>
     </main>

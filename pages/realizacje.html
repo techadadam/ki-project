@@ -86,7 +86,7 @@
     <script defer src="../js/script.js"></script>
     <script defer src="../js/reveal.js"></script>
     <script defer src="../js/reaveal-fb.js"></script>
-    <script defer src="../js/stickyHeader.js"></script>
+    <script defer src="../js/stickyHeader-subpage.js"></script>
     <script defer src="../js/playSubtitlesGallery.js"></script>
     <script defer src="../js/realizations-filtering.js"></script>
   </head>
@@ -131,7 +131,7 @@
                 >
               </li>
               <li class="header__menulist__element header__hover">
-                <a href="#realizations" class="header__menulist__link"
+                <a href="kontakt.html" class="header__menulist__link"
                   >Kontakt</a
                 >
               </li>
@@ -173,10 +173,10 @@
             </li>
 
             <li>
-              <a href="#realizations" class="mobile-menu__link">Realizacje</a>
+              <a href="#" class="mobile-menu__link">Realizacje</a>
             </li>
             <li>
-              <a href="#cta" class="mobile-menu__link">Kontakt</a>
+              <a href="kontakt.html" class="mobile-menu__link">Kontakt</a>
             </li>
           </ul>
         </nav>
@@ -184,31 +184,26 @@
     </header>
 
     <main>
-      <section class="section__hero section__hero--subpage">
-        <div class="hero__background">
-          <img
-            src="../img/CG01_Hero_eleganckie_wnetrze_nowoczesnego_lobby.webp"
-            alt="Realizacje Kamińscy"
-          />
-        </div>
+      <section class="section__hero--subpage">
+        <div class="section__hero--subpage__container">
+          <nav
+            class="section__hero--subpage__breadcrumb"
+            aria-label="Ścieżka nawigacji"
+          >
+            <a href="../index.html">Strona główna</a>
+            <span aria-hidden="true">/</span>
+            <span aria-current="page">Realizacje</span>
+          </nav>
 
-        <div class="hero__overlay"></div>
+          <h1 class="section__hero--subpage__title">
+            <strong>REALIZACJE</strong>
+            <span>Doświadczenie, które widać</span>
+          </h1>
 
-        <div class="hero__content">
-          <div class="hero__box">
-            <h1>REALIZACJE</h1>
-
-            <div class="hero__subtitles-gallery">
-              <h2 class="hero__subtitle hero__subtitle--subpage">
-                Doświadczenie, które widać w każdym metrze.
-              </h2>
-
-              <p class="hero__description">
-                Zobacz wybrane inwestycje, które zrealizowaliśmy w Polsce i
-                Europie dla wymagających klientów.
-              </p>
-            </div>
-          </div>
+          <p class="section__hero--subpage__description">
+            Zobacz wybrane inwestycje, które zrealizowaliśmy <br />w Polsce i
+            Europie dla wymagających klientów.
+          </p>
         </div>
       </section>
 

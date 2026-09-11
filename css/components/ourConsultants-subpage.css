@@ -1,0 +1,229 @@
+/* NASI DORADCY */
+
+.advisors,
+.advisors * {
+  box-sizing: border-box;
+}
+
+.advisors {
+  padding: 60px 0;
+  background: #f3eee5;
+  color: #242424;
+  font-family: "Montserrat", Arial, sans-serif;
+  line-height: 1.5;
+}
+
+.advisors__container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+.advisors h2 {
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: clamp(26px, 3vw, 36px);
+  line-height: 1.2;
+}
+
+.advisors__intro {
+  margin: 14px 0 32px;
+  color: #606060;
+  text-align: center;
+}
+
+/* Dwie kolumny; piąta wizytówka zostaje po lewej */
+.advisors__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.advisor {
+  display: grid;
+  grid-template-columns: 35% minmax(0, 1fr);
+  gap: 22px;
+  padding: 14px;
+  background: #fffdfa;
+  border: 1px solid #e5d9c8;
+  border-radius: 8px;
+  box-shadow: 0 3px 12px rgb(50 35 15 / 5%);
+}
+
+.advisor__photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 230px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 5px;
+}
+
+.advisor__info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 6px 0;
+  overflow-wrap: anywhere;
+}
+
+.advisor h3 {
+  margin: 0;
+  font-size: 21px;
+  line-height: 1.3;
+}
+
+.advisor__role {
+  margin: 4px 0;
+  color: #916b35;
+  font-size: 14px;
+}
+
+.advisor__scope {
+  margin: 0;
+  color: #606060;
+  font-size: 14px;
+}
+
+.advisor__contact {
+  display: grid;
+  gap: 8px;
+  margin: 16px 0;
+  padding-top: 14px;
+  border-top: 1px solid #e5d9c8;
+  font-size: 14px;
+}
+
+.advisor a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.advisor a:hover {
+  text-decoration: underline;
+}
+
+.advisor a:focus-visible {
+  outline: 2px solid #916b35;
+  outline-offset: 4px;
+}
+
+.advisor__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 16px;
+  margin-top: auto;
+  color: #916b35;
+  font-size: 14px;
+}
+
+.advisor__actions a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+.advisor__actions .advisor__button {
+  padding: 10px 16px;
+  border-radius: 4px;
+  background: #f4e7d3;
+  color: #493923;
+}
+
+.advisor__button:hover {
+  background: #ebd9bd;
+}
+
+/* RESPONSYWNOŚĆ */
+
+/* Mniejsze komputery */
+@media (max-width: 1200px) {
+  .advisors__container {
+    padding: 0 40px;
+  }
+
+  .advisors__grid {
+    gap: 20px;
+  }
+
+  .advisor {
+    gap: 16px;
+  }
+
+  .advisor h3 {
+    font-size: 19px;
+  }
+}
+
+/* Tablety — jedna szeroka wizytówka w rzędzie */
+@media (max-width: 992px) {
+  .advisors__container {
+    padding: 0 32px;
+  }
+
+  .advisors__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .advisor {
+    grid-template-columns: 200px minmax(0, 1fr);
+    gap: 24px;
+  }
+}
+
+/* Małe tablety */
+@media (max-width: 768px) {
+  .advisors {
+    padding: 40px 0;
+  }
+
+  .advisors__container {
+    padding: 0 24px;
+  }
+
+  .advisor {
+    grid-template-columns: 160px minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  .advisors__intro {
+    font-size: 14px;
+  }
+}
+
+/* Telefony — zdjęcie nad danymi */
+@media (max-width: 480px) {
+  .advisors__container {
+    padding: 0 20px;
+  }
+
+  .advisor {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .advisor__photo {
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+  }
+
+  .advisor__info {
+    padding: 0;
+  }
+}
+
+/* Najmniejsze telefony */
+@media (max-width: 360px) {
+  .advisors__container {
+    padding: 0 16px;
+  }
+
+  .advisor {
+    padding: 12px;
+  }
+}
