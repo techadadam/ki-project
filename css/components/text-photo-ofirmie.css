@@ -1,0 +1,155 @@
+/* ZESPÓŁ — niezależne style sekcji */
+.team-section,
+.team-section * {
+  box-sizing: border-box;
+}
+
+.team-section {
+  --team-accent: var(--color-accent1, #c19a5f);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  align-items: center;
+  gap: 60px;
+  padding: 56px 5%;
+  background: #111110;
+  color: #f5f3ef;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.team-section__text {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.team-section h2 {
+  margin: 0 0 18px;
+  color: #f5f3ef;
+  font-size: clamp(26px, 2.7vw, 40px);
+  line-height: 1.15;
+}
+.team-section p {
+  margin: 0;
+  color: #ccc;
+}
+
+.team-section__list {
+  display: grid;
+  gap: 24px;
+  margin: 30px 0;
+  padding: 0;
+  list-style: none;
+}
+.team-section__list li {
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr);
+  align-items: start;
+  gap: 18px;
+}
+.team-section__list svg {
+  display: block;
+  width: 46px;
+  height: 46px;
+  padding: 8px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  color: var(--team-accent);
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.team-section h3 {
+  margin: 0 0 4px;
+  color: var(--team-accent);
+  font-size: 16px;
+  line-height: 1.4;
+}
+.team-section__list p {
+  font-size: 14px;
+}
+
+.team-section__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  min-height: 46px;
+  padding: 12px 22px;
+  border: 1px solid var(--team-accent);
+  color: var(--team-accent);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+}
+.team-section__button:hover {
+  background: var(--team-accent);
+  color: #111110;
+}
+.team-section__button:focus-visible {
+  outline: 2px solid #f5f3ef;
+  outline-offset: 4px;
+}
+
+.team-section__photo {
+  position: relative;
+  min-width: 0;
+  margin: 0;
+}
+.team-section__photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+.team-section__photo figcaption {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  padding: 3px 8px;
+  background: rgb(0 0 0 / 65%);
+  color: #fff;
+  font-size: 11px;
+}
+
+/* RESPONSYWNOŚĆ */
+@media (max-width: 1200px) {
+  .team-section {
+    gap: 36px;
+    padding: 44px 4%;
+  }
+}
+
+@media (max-width: 992px) {
+  .team-section {
+    gap: 28px;
+    font-size: 15px;
+  }
+  .team-section__list {
+    gap: 20px;
+  }
+  .team-section__list li {
+    gap: 12px;
+  }
+}
+
+/* Małe tablety i telefony: tekst nad zdjęciem */
+@media (max-width: 768px) {
+  .team-section {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+    padding: 36px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-section {
+    padding: 28px 16px;
+  }
+  .team-section__button {
+    width: 100%;
+  }
+}

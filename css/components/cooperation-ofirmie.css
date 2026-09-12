@@ -1,0 +1,179 @@
+/* WSPÓŁPRACA — kroki pionowo na każdej szerokości */
+.cooperation,
+.cooperation * {
+  box-sizing: border-box;
+}
+
+.cooperation {
+  --step-size: 72px;
+  --step-space: 36px;
+  --step-bg: #faf8f3;
+  --step-accent: var(--color-accent1, #b18a50);
+  padding: 64px 5%;
+  background: var(--step-bg);
+  color: #161616;
+  font-family: "Montserrat", Arial, sans-serif;
+  line-height: 1.5;
+}
+
+.cooperation__heading {
+  margin-bottom: 48px;
+  text-align: center;
+}
+.cooperation__heading p {
+  margin: 0 0 12px;
+  color: var(--step-accent);
+  font-size: 14px;
+  font-weight: 600;
+}
+.cooperation h2 {
+  margin: 0;
+  color: #161616;
+  font-size: clamp(26px, 3vw, 40px);
+  line-height: 1.2;
+}
+
+.cooperation__steps {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+.cooperation__steps li {
+  position: relative;
+  display: grid;
+  grid-template-columns: var(--step-size) minmax(0, 1fr);
+  align-items: start;
+  gap: 32px;
+  padding-bottom: var(--step-space);
+}
+.cooperation__steps li + li {
+  padding-top: var(--step-space);
+}
+.cooperation__steps li:last-child {
+  padding-bottom: 0;
+}
+
+/* Linia od środka jednego numeru do środka następnego.
+   Dopasowuje się również wtedy, gdy tekst zajmuje więcej wierszy. */
+.cooperation__steps li:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  top: calc(var(--step-size) / 2);
+  bottom: calc(0px - var(--step-space) - var(--step-size) / 2);
+  left: calc(var(--step-size) / 2 - 1px);
+  width: 2px;
+  background: var(--step-accent);
+}
+.cooperation__steps li + li::before {
+  top: calc(var(--step-space) + var(--step-size) / 2);
+}
+
+.cooperation__number {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: var(--step-size);
+  height: var(--step-size);
+  border: 2px solid var(--step-accent);
+  border-radius: 50%;
+  background: var(--step-bg);
+  color: var(--step-accent);
+  font-size: 28px;
+  font-weight: 700;
+}
+.cooperation__steps li > div {
+  min-width: 0;
+  padding-top: 4px;
+  overflow-wrap: anywhere;
+}
+.cooperation__steps h3 {
+  margin: 0 0 8px;
+  color: #161616;
+  font-size: 26px;
+  line-height: 1.25;
+}
+.cooperation__steps p {
+  margin: 0;
+  color: #656565;
+  font-size: 18px;
+}
+
+/* Delikatne separatory, wyłącznie pod tekstem. */
+.cooperation__steps li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: calc(var(--step-size) + 32px);
+  height: 1px;
+  background: #e4dacc;
+}
+
+/* RESPONSYWNOŚĆ — na końcu pliku */
+@media (max-width: 1200px) {
+  .cooperation {
+    padding: 56px 4%;
+  }
+}
+
+@media (max-width: 992px) {
+  .cooperation {
+    --step-size: 64px;
+    --step-space: 30px;
+  }
+  .cooperation__steps h3 {
+    font-size: 24px;
+  }
+  .cooperation__steps p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cooperation {
+    --step-size: 56px;
+    padding: 40px 24px;
+  }
+  .cooperation__heading {
+    margin-bottom: 32px;
+  }
+  .cooperation__steps li {
+    gap: 20px;
+  }
+  .cooperation__number {
+    font-size: 22px;
+  }
+  .cooperation__steps h3 {
+    font-size: 22px;
+  }
+  .cooperation__steps li:not(:last-child)::after {
+    left: calc(var(--step-size) + 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .cooperation {
+    --step-size: 44px;
+    --step-space: 24px;
+    padding: 32px 16px;
+  }
+  .cooperation__heading p {
+    font-size: 12px;
+  }
+  .cooperation__steps li {
+    gap: 16px;
+  }
+  .cooperation__number {
+    font-size: 18px;
+  }
+  .cooperation__steps h3 {
+    font-size: 20px;
+  }
+  .cooperation__steps p {
+    font-size: 15px;
+  }
+  .cooperation__steps li:not(:last-child)::after {
+    left: calc(var(--step-size) + 16px);
+  }
+}

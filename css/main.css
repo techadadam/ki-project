@@ -14,7 +14,7 @@
 @import "components/realizations.css";
 @import "components/realizations-subpage.css";
 @import "components/featuresBar.css";
-@import "components/featuresBar_realizations.css";
+@import "components/featuresBar_subpage.css";
 @import "components/ourServices.css";
 @import "components/ourClients.css";
 @import "components/ourConsultants.css";
@@ -22,6 +22,10 @@
 @import "components/kontaktForm.css";
 @import "components/main-info-kontakt.css";
 @import "components/ourLocation.css";
+@import "components/photo-text-ofirmie.css";
+@import "components/text-photo-ofirmie.css";
+@import "components/cooperation-ofirmie.css";
+
 /*@import "components/realizacjeHero.css";*/
 
 @import "layout/containers.css";

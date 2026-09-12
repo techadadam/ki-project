@@ -1,8 +1,15 @@
 /* =========================================================
-   STATYSTYKI - PODSTRONA REALIZACJE
+   STATYSTYKI - PODSTRONA subpage
    ========================================================= */
 
-.realizacje-statystyki {
+.subpage-statystyki {
+  --stat-bg: #080808;
+  --stat-text: #fff;
+  --stat-title: #c19a5f;
+  --stat-desc: #ddd;
+  --stat-border: rgba(185, 154, 104, 0.3);
+  --stat-row-border: rgba(185, 154, 104, 0.2);
+
   display: grid;
   grid-template-columns: repeat(5, 1fr);
 
@@ -10,15 +17,15 @@
   padding: 2.8rem 6%;
   box-sizing: border-box;
 
-  background: #080808;
-  color: #fff;
+  background: var(--stat-bg);
+  color: var(--stat-text);
 }
 
 /* =========================================================
    POJEDYNCZY ELEMENT
    ========================================================= */
 
-.realizacje-stat {
+.subpage-stat {
   min-width: 0;
 
   display: flex;
@@ -28,10 +35,10 @@
 
   padding: 0 2.4rem;
 
-  border-left: 1px solid rgba(185, 154, 104, 0.3);
+  border-left: 1px solid var(--stat-border);
 }
 
-.realizacje-stat:first-child {
+.subpage-stat:first-child {
   border-left: 0;
 }
 
@@ -39,7 +46,7 @@
    IKONA
    ========================================================= */
 
-.realizacje-stat img {
+.subpage-stat img {
   flex: 0 0 auto;
 
   width: 4.8rem;
@@ -52,16 +59,16 @@
    TEKST
    ========================================================= */
 
-.realizacje-stat > div {
+.subpage-stat > div {
   min-width: 0;
 }
 
-.realizacje-stat strong {
+.subpage-stat strong {
   display: block;
 
   margin-bottom: 0.5rem;
 
-  color: #c19a5f;
+  color: var(--stat-title);
 
   font-size: clamp(1.8rem, 1.7vw, 2.6rem);
   line-height: 1.05;
@@ -70,16 +77,26 @@
   text-transform: uppercase;
 }
 
-.realizacje-stat span {
+.subpage-stat span {
   display: block;
 
-  color: #ddd;
+  color: var(--stat-desc);
 
   font-size: 1rem;
   line-height: 1.35;
   font-weight: 500;
 
   text-transform: uppercase;
+}
+
+/* Jasny wariant: <section class="subpage-statystyki light"> */
+.subpage-statystyki.light {
+  --stat-bg: #f3eee5;
+  --stat-text: #242424;
+  --stat-title: var(--color-accent1);
+  --stat-desc: #242424;
+  --stat-border: #d8cbb6;
+  --stat-row-border: #d8cbb6;
 }
 
 /* =========================================================
@@ -92,21 +109,21 @@
    ========================================================= */
 
 @media (max-width: 75em) {
-  .realizacje-statystyki {
+  .subpage-statystyki {
     padding: 2.6rem 4%;
   }
 
-  .realizacje-stat {
+  .subpage-stat {
     gap: 1.4rem;
     padding: 0 1.6rem;
   }
 
-  .realizacje-stat img {
+  .subpage-stat img {
     width: 4.2rem;
     height: 4.2rem;
   }
 
-  .realizacje-stat span {
+  .subpage-stat span {
     font-size: 0.9rem;
   }
 }
@@ -117,26 +134,26 @@
    ========================================================= */
 
 @media (max-width: 59em) {
-  .realizacje-statystyki {
+  .subpage-statystyki {
     grid-template-columns: repeat(3, 1fr);
 
     padding: 2.4rem 5%;
   }
 
-  .realizacje-stat {
+  .subpage-stat {
     min-height: 10rem;
 
     padding: 1.8rem 2rem;
 
-    border-left: 1px solid rgba(185, 154, 104, 0.3);
+    border-left: 1px solid var(--stat-border);
   }
 
-  .realizacje-stat:nth-child(3n + 1) {
+  .subpage-stat:nth-child(3n + 1) {
     border-left: 0;
   }
 
-  .realizacje-stat:nth-child(-n + 3) {
-    border-bottom: 1px solid rgba(185, 154, 104, 0.2);
+  .subpage-stat:nth-child(-n + 3) {
+    border-bottom: 1px solid var(--stat-row-border);
   }
 }
 
@@ -146,17 +163,17 @@
    ========================================================= */
 
 @media (max-width: 44em) {
-  .realizacje-stat {
+  .subpage-stat {
     gap: 1.2rem;
     padding: 1.6rem;
   }
 
-  .realizacje-stat img {
+  .subpage-stat img {
     width: 4rem;
     height: 4rem;
   }
 
-  .realizacje-stat strong {
+  .subpage-stat strong {
     font-size: 1.8rem;
   }
 }
@@ -167,13 +184,13 @@
    ========================================================= */
 
 @media (max-width: 34em) {
-  .realizacje-statystyki {
+  .subpage-statystyki {
     grid-template-columns: repeat(2, 1fr);
 
     padding: 2rem 1.8rem;
   }
 
-  .realizacje-stat {
+  .subpage-stat {
     min-height: 11rem;
 
     justify-content: flex-start;
@@ -181,14 +198,14 @@
     padding: 1.8rem 1rem;
 
     border-left: 0;
-    border-bottom: 1px solid rgba(185, 154, 104, 0.2);
+    border-bottom: 1px solid var(--stat-row-border);
   }
 
-  .realizacje-stat:nth-child(even) {
-    border-left: 1px solid rgba(185, 154, 104, 0.3);
+  .subpage-stat:nth-child(even) {
+    border-left: 1px solid var(--stat-border);
   }
 
-  .realizacje-stat:last-child {
+  .subpage-stat:last-child {
     grid-column: 1 / -1;
 
     justify-content: center;
@@ -197,16 +214,16 @@
     border-bottom: 0;
   }
 
-  .realizacje-stat img {
+  .subpage-stat img {
     width: 3.8rem;
     height: 3.8rem;
   }
 
-  .realizacje-stat strong {
+  .subpage-stat strong {
     font-size: 1.7rem;
   }
 
-  .realizacje-stat span {
+  .subpage-stat span {
     font-size: 0.85rem;
   }
 }
@@ -217,22 +234,22 @@
    ========================================================= */
 
 @media (max-width: 24em) {
-  .realizacje-statystyki {
+  .subpage-statystyki {
     grid-template-columns: 1fr;
   }
 
-  .realizacje-stat,
-  .realizacje-stat:nth-child(even),
-  .realizacje-stat:last-child {
+  .subpage-stat,
+  .subpage-stat:nth-child(even),
+  .subpage-stat:last-child {
     grid-column: auto;
 
     justify-content: flex-start;
 
     border-left: 0;
-    border-bottom: 1px solid rgba(185, 154, 104, 0.2);
+    border-bottom: 1px solid var(--stat-row-border);
   }
 
-  .realizacje-stat:last-child {
+  .subpage-stat:last-child {
     border-bottom: 0;
   }
 }
