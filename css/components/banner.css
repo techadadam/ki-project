@@ -1,0 +1,77 @@
+.prep-banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 220px;
+  padding: 40px 6%;
+  box-sizing: border-box;
+
+  background-color: #111;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.6) 35%,
+      rgba(0, 0, 0, 0.1) 75%
+    ),
+    url("../../img/CG_przygotowanie-podloza.webp");
+  background-size: cover;
+  background-position: center;
+}
+
+.prep-banner h2 {
+  margin: 0;
+  color: #fff;
+  font-family: inherit;
+  font-size: clamp(26px, 2.5vw, 38px);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.prep-banner h2 span {
+  display: block;
+  color: var(--color-accent1, #b18a50);
+}
+
+.prep-banner small {
+  position: absolute;
+  right: 20px;
+  bottom: 12px;
+  padding: 3px 6px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #eee;
+  font-size: 10px;
+}
+
+/* Responsywność */
+
+@media (max-width: 992px) {
+  .prep-banner {
+    min-height: 200px;
+    padding: 35px 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  .prep-banner {
+    min-height: 180px;
+    padding: 30px 5% 40px;
+    background-position: 60% center;
+  }
+}
+
+@media (max-width: 480px) {
+  .prep-banner {
+    min-height: 170px;
+    background-position: 65% center;
+  }
+
+  .prep-banner h2 {
+    font-size: 26px;
+  }
+
+  .prep-banner small {
+    right: 12px;
+    bottom: 8px;
+  }
+}

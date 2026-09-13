@@ -1,0 +1,302 @@
+.services-prep {
+  --prep-accent: var(--color-accent1, #a47b45);
+
+  padding: 70px 5%;
+  background: #faf8f3;
+  color: #222;
+  font-family: inherit;
+  overflow-wrap: anywhere;
+  scroll-margin-top: 120px;
+}
+
+.services-prep,
+.services-prep * {
+  box-sizing: border-box;
+}
+
+.services-prep__intro,
+.services-prep__grid,
+.services-prep__split {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 1400px;
+  margin-inline: auto;
+}
+
+.services-prep__intro {
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+/* Nagłówek zajmuje całą szerokość, jeśli nie ma zdjęcia. */
+.services-prep__intro > div:only-child {
+  grid-column: 1 / -1;
+}
+
+.services-prep__label {
+  color: var(--prep-accent);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.services-prep h2 {
+  margin: 8px 0 12px;
+  font-size: clamp(26px, 2.5vw, 36px);
+  line-height: 1.2;
+}
+
+.services-prep p {
+  margin: 0;
+  color: #666;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.services-prep__photo {
+  display: block;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 3px;
+}
+
+/* Kafelki usług */
+
+.services-prep__card {
+  display: grid;
+  grid-template-columns: auto 40px minmax(0, 1fr);
+  align-items: start;
+  gap: 20px;
+  padding: 28px;
+  border: 1px solid #e2d7c6;
+  border-radius: 4px;
+}
+
+.services-prep__number {
+  color: var(--prep-accent);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.services-prep__card > img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.services-prep__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  min-width: 0;
+}
+
+.services-prep h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+.services-prep__content a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  margin-top: auto;
+  padding-top: 16px;
+  color: var(--prep-accent);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.services-prep__content a span {
+  flex-shrink: 0;
+  font-size: 20px;
+}
+
+.services-prep__content a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.services-prep__content a:focus-visible {
+  outline: 2px solid var(--prep-accent);
+  outline-offset: 5px;
+}
+
+/* Ciemny kafelek z kontaktem */
+
+.services-prep__card--dark {
+  grid-template-columns: 56px minmax(0, 1fr);
+  background: #111;
+  border-color: #333;
+  color: #fff;
+}
+
+.services-prep__card--dark p {
+  color: #ccc;
+}
+
+.services-prep__advisor {
+  width: 56px;
+  height: 56px;
+  fill: none;
+  stroke: var(--prep-accent);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.services-prep__content .services-prep__button {
+  justify-content: center;
+  margin-top: 20px;
+  padding: 10px 16px;
+  border: 1px solid var(--prep-accent);
+  border-radius: 2px;
+  font-size: 12px;
+  text-transform: uppercase;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+}
+
+.services-prep__content .services-prep__button:hover {
+  background: var(--prep-accent);
+  color: #111;
+  text-decoration: none;
+}
+
+/* Trzecia sekcja: nagłówek i kafelek po lewej, zdjęcie po prawej. */
+.services-prep__split > div {
+  min-width: 0;
+}
+
+.services-prep__split h2 {
+  margin-bottom: 24px;
+}
+
+.services-prep__figure {
+  position: relative;
+  min-width: 0;
+  min-height: 260px;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 3px;
+  background: #e9e3d9;
+}
+
+.services-prep__figure > img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.services-prep__figure figcaption {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  padding: 4px 8px;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 10px;
+}
+
+/* Responsywność wszystkich trzech sekcji */
+
+@media (max-width: 1200px) {
+  .services-prep__card {
+    gap: 16px;
+    padding: 24px;
+  }
+}
+
+@media (max-width: 992px) {
+  .services-prep {
+    padding: 50px 4%;
+  }
+
+  .services-prep__intro,
+  .services-prep__grid,
+  .services-prep__split {
+    gap: 18px;
+  }
+
+  .services-prep__card {
+    grid-template-columns: auto 30px minmax(0, 1fr);
+    gap: 12px;
+    padding: 20px;
+  }
+
+  .services-prep__card > img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .services-prep__card--dark {
+    grid-template-columns: 44px minmax(0, 1fr);
+  }
+
+  .services-prep__advisor {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-prep {
+    padding: 40px 5%;
+    scroll-margin-top: 90px;
+  }
+
+  .services-prep__intro,
+  .services-prep__grid,
+  .services-prep__split {
+    grid-template-columns: 1fr;
+  }
+
+  .services-prep__photo {
+    height: 200px;
+  }
+
+  .services-prep__figure {
+    min-height: 0;
+    aspect-ratio: 16 / 9;
+  }
+
+  .services-prep__card {
+    gap: 18px;
+    padding: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-prep__card {
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 12px;
+    padding: 20px;
+  }
+
+  .services-prep__card > img {
+    justify-self: end;
+  }
+
+  .services-prep__content {
+    grid-column: 1 / -1;
+  }
+
+  .services-prep__content .services-prep__button {
+    width: 100%;
+  }
+
+  .services-prep__photo {
+    height: 160px;
+  }
+}

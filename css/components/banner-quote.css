@@ -1,0 +1,122 @@
+.quote-banner {
+  padding: 50px 5%;
+  background-color: #111;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 0.7) 50%,
+      rgba(0, 0, 0, 0.15)
+    ),
+    url("../../img/CG_wycena-tlo.webp");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  font-family: inherit;
+}
+
+.quote-banner,
+.quote-banner * {
+  box-sizing: border-box;
+}
+
+.quote-banner h2 {
+  max-width: 850px;
+  margin: 0 0 12px;
+  font-size: clamp(26px, 2.5vw, 38px);
+  line-height: 1.2;
+}
+
+.quote-banner p {
+  max-width: 700px;
+  margin: 0;
+  color: #ddd;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.quote-banner__links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px 36px;
+  margin-top: 26px;
+}
+
+.quote-banner a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 48px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.quote-banner a span {
+  flex-shrink: 0;
+  font-size: 20px;
+}
+
+.quote-banner__button {
+  padding: 14px 28px;
+  border-radius: 2px;
+  background: var(--color-accent1, #b18a50);
+  color: #111;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color 0.2s;
+}
+
+.quote-banner__button:hover {
+  background: #d4b27b;
+}
+
+.quote-banner__link {
+  color: #eee;
+  text-underline-offset: 4px;
+}
+
+.quote-banner__link:hover {
+  color: var(--color-accent1, #b18a50);
+}
+
+.quote-banner a:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 5px;
+}
+
+/* Responsywność */
+
+@media (max-width: 992px) {
+  .quote-banner {
+    padding: 40px 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  .quote-banner {
+    background-position: 65% center;
+  }
+
+  .quote-banner p {
+    font-size: 16px;
+  }
+
+  .quote-banner__links {
+    gap: 12px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .quote-banner {
+    padding: 32px 5%;
+  }
+
+  .quote-banner__links {
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 22px;
+  }
+}
