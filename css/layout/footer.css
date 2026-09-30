@@ -99,7 +99,8 @@
 
   min-height: 120px;
 
-  background: url("img/europa.png") center / contain no-repeat;
+  background: url("../../img/CG205_grafikaEuropa.png") center / contain
+    no-repeat;
 }
 
 .footer-europa h2 {
