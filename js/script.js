@@ -1,9 +1,9 @@
 //console.log("Starting displaying WebSite!");
 
-// current year
-//const yearEl = document.querySelector(".year");
-//const currentYear = new Date().getFullYear();
-//yearEl.textContent = currentYear;
+// Current year
+const yearEl = document.querySelector(".year");
+const currentYear = new Date().getFullYear();
+yearEl.textContent = currentYear;
 
 // Mobile navigation
 /*

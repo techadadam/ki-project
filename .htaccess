@@ -9,6 +9,9 @@
 Options -Indexes
 DirectoryIndex index.html
 
+Options - Errors
+ErrorDocument 404 /404.html
+
 # Blokada dostępu do plików ukrytych (z wyjątkiem .well-known używanego np. do SSL)
 <FilesMatch "(^|/)\.(?!well-known)">
   Require all denied
