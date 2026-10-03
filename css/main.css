@@ -19,7 +19,7 @@
 @import "components/ourClients.css";
 @import "components/ourConsultants.css";
 @import "components/ourConsultants-subpage.css";
-@import "components/kontaktForm.css";
+@import "components/form.css";
 @import "components/main-info-kontakt.css";
 @import "components/ourLocation.css";
 @import "components/photo-text-ofirmie.css";
@@ -29,7 +29,7 @@
 @import "components/uslugi-boxlist.css";
 @import "components/banner.css";
 @import "components/banner-quote.css";
-
+/*@import "components/kontaktForm.css";*/
 /*@import "components/realizacjeHero.css";*/
 
 @import "layout/containers.css";
