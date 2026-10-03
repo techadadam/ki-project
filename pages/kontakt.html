@@ -251,8 +251,8 @@
 
                 <div class="advisor__contact">
                   <a href="tel:+48509079855">+48 509 079 855</a>
-                  <a href="mailto:doradca1@example.com"
-                    >jakub.kaminski@phterry.pl</a
+                  <a href="mailto:jakub.kaminski@kaminscypodlogi.pl"
+                    >jakub.kaminski@kaminscypodlogi.pl</a
                   >
                 </div>
 
@@ -260,7 +260,9 @@
                   <a class="advisor__button" href="tel:+48509079855">
                     Zadzwoń ↗
                   </a>
-                  <a href="mailto:jakub.kaminski@phterry.pl">Napisz ↗</a>
+                  <a href="mailto:jakub.kaminski@kaminscypodlogi.pl"
+                    >Napisz ↗</a
+                  >
                 </div>
               </div>
             </article>
@@ -283,8 +285,8 @@
 
                 <div class="advisor__contact">
                   <a href="tel:+48530401775">+48 530 401 775</a>
-                  <a href="mailto:doradca2@example.com"
-                    >zofia.kaminska@phterry.pl</a
+                  <a href="mailto:zofia.kaminska@kaminscypodlogi.pl"
+                    >zofia.kaminska@kaminscypodlogi.pl</a
                   >
                 </div>
 
@@ -292,7 +294,9 @@
                   <a class="advisor__button" href="tel:+48530401775">
                     Zadzwoń ↗
                   </a>
-                  <a href="mailto:zofia.kaminska@phterry.pl">Napisz ↗</a>
+                  <a href="mailto:zofia.kaminska@kaminscypodlogi.pl"
+                    >Napisz ↗</a
+                  >
                 </div>
               </div>
             </article>
@@ -314,9 +318,9 @@
                 <p class="advisor__scope">ds. inwestycji</p>
 
                 <div class="advisor__contact">
-                  <a href="tel:+48000000000">+48 730 399 269</a>
-                  <a href="mailto:doradca3@example.com"
-                    >lukasz.legowski@phterry.pl</a
+                  <a href="tel:+48730399269">+48 730 399 269</a>
+                  <a href="mailto:lukasz.legowski@kaminscypodlogi.pl"
+                    >lukasz.legowski@kaminscypodlogi.pl</a
                   >
                 </div>
 
@@ -324,7 +328,9 @@
                   <a class="advisor__button" href="tel:+48730399269">
                     Zadzwoń ↗
                   </a>
-                  <a href="mailto:lukasz.legowski@phterry.pl">Napisz ↗</a>
+                  <a href="mailto:lukasz.legowski@kaminscypodlogi.pl"
+                    >Napisz ↗</a
+                  >
                 </div>
               </div>
             </article>
@@ -466,54 +472,128 @@
             <p>Odpowiemy po analizie zakresu i dokumentacji.</p>
           </div>
 
-          <form>
+          <form
+            id="investment-form"
+            action="../formularz/send.php"
+            method="post"
+            enctype="multipart/form-data"
+          >
+            <input type="hidden" name="csrf_token" value="" />
+
+            <div class="form-hp" aria-hidden="true">
+              <label>
+                Twoja strona internetowa
+                <input
+                  type="text"
+                  name="website_url"
+                  tabindex="-1"
+                  autocomplete="off"
+                />
+              </label>
+            </div>
+
             <div class="form-grid">
               <div class="form-field">
-                <label>FIRMA</label>
-                <input type="text" placeholder="Nazwa firmy" />
+                <label for="firma">FIRMA</label>
+                <input
+                  id="firma"
+                  type="text"
+                  name="firma"
+                  maxlength="200"
+                  placeholder="Nazwa firmy"
+                />
               </div>
 
               <div class="form-field">
-                <label>OSOBA KONTAKTOWA</label>
-                <input type="text" placeholder="Imię i nazwisko" />
+                <label for="osoba">OSOBA KONTAKTOWA *</label>
+                <input
+                  id="osoba"
+                  type="text"
+                  name="osoba"
+                  maxlength="120"
+                  placeholder="Imię i nazwisko"
+                  required
+                />
               </div>
 
               <div class="form-field">
-                <label>E-MAIL</label>
-                <input type="email" placeholder="adres@firma.pl" />
+                <label for="email">E-MAIL *</label>
+                <input
+                  id="email"
+                  type="email"
+                  name="email"
+                  maxlength="254"
+                  placeholder="adres@firma.pl"
+                  required
+                />
               </div>
 
               <div class="form-field">
-                <label>TELEFON</label>
-                <input type="tel" placeholder="+48" />
+                <label for="telefon">TELEFON</label>
+                <input
+                  id="telefon"
+                  type="tel"
+                  name="telefon"
+                  maxlength="40"
+                  placeholder="+48"
+                />
               </div>
 
               <div class="form-field">
-                <label>LOKALIZACJA</label>
-                <input type="text" placeholder="Miasto / kraj" />
+                <label for="lokalizacja">LOKALIZACJA</label>
+                <input
+                  id="lokalizacja"
+                  type="text"
+                  name="lokalizacja"
+                  maxlength="150"
+                  placeholder="Miasto / kraj"
+                />
               </div>
 
               <div class="form-field">
-                <label>PLANOWANY TERMIN</label>
-                <input type="text" placeholder="Miesiąc / rok" />
+                <label for="termin">PLANOWANY TERMIN</label>
+                <input
+                  id="termin"
+                  type="text"
+                  name="termin"
+                  maxlength="100"
+                  placeholder="Miesiąc / rok"
+                />
               </div>
             </div>
 
             <div class="form-field form-message">
-              <label>ZAKRES PRAC</label>
+              <label for="wiadomosc">ZAKRES PRAC *</label>
               <textarea
+                id="wiadomosc"
+                name="wiadomosc"
+                maxlength="5000"
+                minlength="10"
                 placeholder="Opis obiektu, metraż i oczekiwany zakres..."
+                required
               ></textarea>
             </div>
 
             <div class="form-bottom">
               <label class="upload-btn">
                 + DODAJ PRZEDMIAR LUB PROJEKT
-                <input type="file" />
+                <input
+                  type="file"
+                  name="zalacznik"
+                  accept=".pdf,.xlsx,.xls,.csv,.dwg,.dxf,.jpg,.jpeg,.png"
+                />
               </label>
 
               <button type="submit">WYŚLIJ ZAPYTANIE</button>
             </div>
+
+            <div class="form-status" role="status" aria-live="polite"></div>
+
+            <p class="form-privacy">
+              Dane z formularza wykorzystujemy wyłącznie do obsługi zapytania.
+              Szczegóły znajdziesz w polityce prywatności
+              <a href="#"></a>.
+            </p>
           </form>
         </div>
       </section>
@@ -610,6 +690,7 @@
     </footer>
 
     <script src="../js/mobileMenu.js"></script>
+    <script src="../formularz/form.js" defer></script>
     <script src="../stats/hit.js"></script>
   </body>
 </html>
